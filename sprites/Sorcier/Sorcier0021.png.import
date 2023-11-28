@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4fx4tmamvmij"
-path="res://.godot/imported/Blue Idle - no slime.png-8f3aabc27211e7fb30bc698d3059b68a.ctex"
+uid="uid://7w034sx0nlus"
+path="res://.godot/imported/Sorcier0021.png-7f9740fc83d2dfaa38c1710d67707c33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Blue Idle - no slime.png"
-dest_files=["res://.godot/imported/Blue Idle - no slime.png-8f3aabc27211e7fb30bc698d3059b68a.ctex"]
+source_file="res://sprites/Sorcier/Sorcier0021.png"
+dest_files=["res://.godot/imported/Sorcier0021.png-7f9740fc83d2dfaa38c1710d67707c33.ctex"]
 
 [params]
 

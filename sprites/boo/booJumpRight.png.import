@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctyx1b6se14l7"
-path="res://.godot/imported/Blue Jump - no slime.png-b1fe6050dd630518cbca6cff413ac2c2.ctex"
+uid="uid://cbgqpkcd4j3xn"
+path="res://.godot/imported/booJumpRight.png-9286a4f70190bd082f0bb48a6aeb8674.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Blue Jump - no slime.png"
-dest_files=["res://.godot/imported/Blue Jump - no slime.png-b1fe6050dd630518cbca6cff413ac2c2.ctex"]
+source_file="res://sprites/boo/booJumpRight.png"
+dest_files=["res://.godot/imported/booJumpRight.png-9286a4f70190bd082f0bb48a6aeb8674.ctex"]
 
 [params]
 
