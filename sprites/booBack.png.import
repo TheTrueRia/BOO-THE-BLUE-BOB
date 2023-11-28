@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duvewbumkuhg"
-path="res://.godot/imported/booBack.png-d71ce84ad8d61553d7743a9c9950d895.ctex"
+path="res://.godot/imported/booBack.png-2e0591d6e5b269d0c1c77670ca528b81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/boo/booBack.png"
-dest_files=["res://.godot/imported/booBack.png-d71ce84ad8d61553d7743a9c9950d895.ctex"]
+source_file="res://sprites/booBack.png"
+dest_files=["res://.godot/imported/booBack.png-2e0591d6e5b269d0c1c77670ca528b81.ctex"]
 
 [params]
 

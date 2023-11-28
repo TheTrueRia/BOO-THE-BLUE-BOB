@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1cn6m51pa5w4"
-path="res://.godot/imported/booLeft.png-896df74613ac67cbb3e08a9ff46a2182.ctex"
+uid="uid://7vnkwq238c27"
+path="res://.godot/imported/booJumpBack.png-46aab8c788c3a678794311a5fd00036d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/boo/booLeft.png"
-dest_files=["res://.godot/imported/booLeft.png-896df74613ac67cbb3e08a9ff46a2182.ctex"]
+source_file="res://sprites/booJumpBack.png"
+dest_files=["res://.godot/imported/booJumpBack.png-46aab8c788c3a678794311a5fd00036d.ctex"]
 
 [params]
 

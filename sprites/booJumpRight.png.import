@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4fx4tmamvmij"
-path="res://.godot/imported/Blue Idle - no slime.png-926e51f78361c690f9ed52f897d9da52.ctex"
+uid="uid://cbgqpkcd4j3xn"
+path="res://.godot/imported/booJumpRight.png-976594d49dbbb1ded64859e74c5688ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/boo/Blue Idle - no slime.png"
-dest_files=["res://.godot/imported/Blue Idle - no slime.png-926e51f78361c690f9ed52f897d9da52.ctex"]
+source_file="res://sprites/booJumpRight.png"
+dest_files=["res://.godot/imported/booJumpRight.png-976594d49dbbb1ded64859e74c5688ed.ctex"]
 
 [params]
 

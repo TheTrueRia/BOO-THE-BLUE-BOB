@@ -1,0 +1,139 @@
+[gd_scene load_steps=27 format=3 uid="uid://vatoxglsospp"]
+
+[ext_resource type="Texture2D" uid="uid://b2sfralhcm87m" path="res://sprites/Sorcier/Sorcier0016.png" id="1_a77kq"]
+[ext_resource type="Texture2D" uid="uid://ccl8jbdjuh1cp" path="res://sprites/Sorcier/Sorcier0017.png" id="2_v84bb"]
+[ext_resource type="Texture2D" uid="uid://cyyr8dlafyujp" path="res://sprites/Sorcier/Sorcier0018.png" id="3_1nfra"]
+[ext_resource type="Texture2D" uid="uid://8urr4bn8skmx" path="res://sprites/Sorcier/Sorcier0019.png" id="4_u6tq6"]
+[ext_resource type="Texture2D" uid="uid://bbrsd8m5dxe5h" path="res://sprites/Sorcier/Sorcier0020.png" id="5_0u16x"]
+[ext_resource type="Texture2D" uid="uid://7w034sx0nlus" path="res://sprites/Sorcier/Sorcier0021.png" id="6_wx7nu"]
+[ext_resource type="Texture2D" uid="uid://bptl7an30ylew" path="res://sprites/Sorcier/Sorcier0022.png" id="7_kk6wc"]
+[ext_resource type="Texture2D" uid="uid://b6bptgpbwxyvy" path="res://sprites/Sorcier/Sorcier0023.png" id="8_ub2xo"]
+[ext_resource type="Texture2D" uid="uid://nepxaivs4gc1" path="res://sprites/Sorcier/Sorcier0000.png" id="9_gvdfm"]
+[ext_resource type="Texture2D" uid="uid://csbvdso50qylm" path="res://sprites/Sorcier/Sorcier0001.png" id="10_cey1b"]
+[ext_resource type="Texture2D" uid="uid://csnxumi8fvjgb" path="res://sprites/Sorcier/Sorcier0002.png" id="11_mhagb"]
+[ext_resource type="Texture2D" uid="uid://16qq3dxggs6m" path="res://sprites/Sorcier/Sorcier0003.png" id="12_je38o"]
+[ext_resource type="Texture2D" uid="uid://dlhoxa42irm1w" path="res://sprites/Sorcier/Sorcier0004.png" id="13_ke74e"]
+[ext_resource type="Texture2D" uid="uid://cala3akcevs4x" path="res://sprites/Sorcier/Sorcier0005.png" id="14_xm7o8"]
+[ext_resource type="Texture2D" uid="uid://dofoicxfnun73" path="res://sprites/Sorcier/Sorcier0006.png" id="15_byy64"]
+[ext_resource type="Texture2D" uid="uid://g1dnmxh480o2" path="res://sprites/Sorcier/Sorcier0007.png" id="16_5t77g"]
+[ext_resource type="Texture2D" uid="uid://l2o6c76m64fw" path="res://sprites/Sorcier/Sorcier0008.png" id="17_gmur7"]
+[ext_resource type="Texture2D" uid="uid://4y3o5q28oswy" path="res://sprites/Sorcier/Sorcier0009.png" id="18_37ha1"]
+[ext_resource type="Texture2D" uid="uid://bv87fw5x3w3ed" path="res://sprites/Sorcier/Sorcier0010.png" id="19_bdj85"]
+[ext_resource type="Texture2D" uid="uid://cpvj1ny0gbjrh" path="res://sprites/Sorcier/Sorcier0011.png" id="20_rwbgo"]
+[ext_resource type="Texture2D" uid="uid://cifjwl74hxnn7" path="res://sprites/Sorcier/Sorcier0012.png" id="21_r2ypk"]
+[ext_resource type="Texture2D" uid="uid://duttae44qfiqj" path="res://sprites/Sorcier/Sorcier0013.png" id="22_x4pu4"]
+[ext_resource type="Texture2D" uid="uid://ds0yy14s152ub" path="res://sprites/Sorcier/Sorcier0014.png" id="23_kuhyb"]
+[ext_resource type="Texture2D" uid="uid://c7cmi6f5f7uqf" path="res://sprites/Sorcier/Sorcier0015.png" id="24_682jx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ct4h0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a77kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v84bb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1nfra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u6tq6")
+}],
+"loop": true,
+"name": &"SorcierDosRunLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_0u16x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wx7nu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kk6wc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ub2xo")
+}],
+"loop": true,
+"name": &"SorcierDosRunRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_gvdfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cey1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mhagb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_je38o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ke74e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xm7o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_byy64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5t77g")
+}],
+"loop": true,
+"name": &"SorcierLumière",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_gmur7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_37ha1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_bdj85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rwbgo")
+}],
+"loop": true,
+"name": &"SorcierRunLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_r2ypk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_x4pu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_kuhyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_682jx")
+}],
+"loop": true,
+"name": &"SorcierRunRight",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sysyb"]
+size = Vector2(458, 525)
+
+[node name="Sorcier" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ct4h0")
+animation = &"SorcierRunRight"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, 18)
+shape = SubResource("RectangleShape2D_sysyb")

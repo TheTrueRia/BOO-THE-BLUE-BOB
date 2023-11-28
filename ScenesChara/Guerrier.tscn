@@ -1,0 +1,132 @@
+[gd_scene load_steps=24 format=3 uid="uid://duwhs3hmxcr5h"]
+
+[ext_resource type="Texture2D" uid="uid://c3dfwutyvjwv4" path="res://sprites/Guerrier/guerrier0017.png" id="1_oerm3"]
+[ext_resource type="Texture2D" uid="uid://bw7y8vvnifh0f" path="res://sprites/Guerrier/guerrier0018.png" id="2_rs37k"]
+[ext_resource type="Texture2D" uid="uid://bbne40tkbf0bl" path="res://sprites/Guerrier/guerrier0019.png" id="3_d7peq"]
+[ext_resource type="Texture2D" uid="uid://dx1x5a1uxk2dt" path="res://sprites/Guerrier/guerrier0021.png" id="4_7e882"]
+[ext_resource type="Texture2D" uid="uid://c5742amq2px15" path="res://sprites/Guerrier/guerrier0022.png" id="5_fdrwy"]
+[ext_resource type="Texture2D" uid="uid://d32kqtyx2vmrk" path="res://sprites/Guerrier/guerrier0023.png" id="6_0i6kr"]
+[ext_resource type="Texture2D" uid="uid://dh3o04a58pdl6" path="res://sprites/Guerrier/guerrier0004.png" id="7_jewg6"]
+[ext_resource type="Texture2D" uid="uid://drfd4d2bd76on" path="res://sprites/Guerrier/guerrier0005.png" id="8_gxqdk"]
+[ext_resource type="Texture2D" uid="uid://crpltwcbcbgvg" path="res://sprites/Guerrier/guerrier0006.png" id="9_2c636"]
+[ext_resource type="Texture2D" uid="uid://qmb7bl8l5t81" path="res://sprites/Guerrier/guerrier0007.png" id="10_kwaul"]
+[ext_resource type="Texture2D" uid="uid://dt3g8prpqb7by" path="res://sprites/Guerrier/guerrier0000.png" id="11_gpae3"]
+[ext_resource type="Texture2D" uid="uid://bm4fn7hwwhsut" path="res://sprites/Guerrier/guerrier0001.png" id="12_1nup8"]
+[ext_resource type="Texture2D" uid="uid://rotvf4tjmyac" path="res://sprites/Guerrier/guerrier0002.png" id="13_xxecf"]
+[ext_resource type="Texture2D" uid="uid://8t5x0y7w7y2n" path="res://sprites/Guerrier/guerrier0003.png" id="14_tai74"]
+[ext_resource type="Texture2D" uid="uid://daudnkpmvriwh" path="res://sprites/Guerrier/guerrier0008.png" id="15_ta4hv"]
+[ext_resource type="Texture2D" uid="uid://d2sib0jlp0v03" path="res://sprites/Guerrier/guerrier0009.png" id="16_30053"]
+[ext_resource type="Texture2D" uid="uid://clchmh4igupia" path="res://sprites/Guerrier/guerrier0010.png" id="17_6nmgf"]
+[ext_resource type="Texture2D" uid="uid://cyrg18i6ryslk" path="res://sprites/Guerrier/guerrier0011.png" id="18_3e8cw"]
+[ext_resource type="Texture2D" uid="uid://brhfb2m8422my" path="res://sprites/Guerrier/guerrier0013.png" id="19_q0cvq"]
+[ext_resource type="Texture2D" uid="uid://bcgh06xoxo5yg" path="res://sprites/Guerrier/guerrier0014.png" id="20_vkhs2"]
+[ext_resource type="Texture2D" uid="uid://b6n1sndeuahgn" path="res://sprites/Guerrier/guerrier0015.png" id="21_3a3sw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wimmb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_oerm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rs37k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d7peq")
+}],
+"loop": true,
+"name": &"guerrierDosRunLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7e882")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fdrwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0i6kr")
+}],
+"loop": true,
+"name": &"guerrierDosRunRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_jewg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gxqdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2c636")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kwaul")
+}],
+"loop": true,
+"name": &"guerrierMarteau",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_gpae3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1nup8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xxecf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tai74")
+}],
+"loop": true,
+"name": &"guerrierRespire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ta4hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_30053")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6nmgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3e8cw")
+}],
+"loop": true,
+"name": &"guerrierRunLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_q0cvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_vkhs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_3a3sw")
+}],
+"loop": true,
+"name": &"guerrierRunRight",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ndl3"]
+size = Vector2(420, 508)
+
+[node name="Guerrier" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wimmb")
+animation = &"guerrierRespire"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, 13)
+shape = SubResource("RectangleShape2D_7ndl3")

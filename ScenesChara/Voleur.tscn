@@ -1,0 +1,141 @@
+[gd_scene load_steps=26 format=3 uid="uid://b2ml0bwqvxh5d"]
+
+[ext_resource type="Texture2D" uid="uid://ypwffnid5at1" path="res://sprites/Voleur/Voleur0004.png" id="1_luy7x"]
+[ext_resource type="Texture2D" uid="uid://faupyrpfq17h" path="res://sprites/Voleur/Voleur0005.png" id="2_htoq2"]
+[ext_resource type="Texture2D" uid="uid://fyi8f3ty6bde" path="res://sprites/Voleur/Voleur0006.png" id="3_1sv3h"]
+[ext_resource type="Texture2D" uid="uid://bqffdeegrgtw7" path="res://sprites/Voleur/Voleur0000.png" id="4_rupvv"]
+[ext_resource type="Texture2D" uid="uid://b4s81q5lf3tnq" path="res://sprites/Voleur/Voleur0001.png" id="5_ko0yu"]
+[ext_resource type="Texture2D" uid="uid://qgwjhs0ocidw" path="res://sprites/Voleur/Voleur0002.png" id="6_mtqx5"]
+[ext_resource type="Texture2D" uid="uid://cncr2ujx1udc5" path="res://sprites/Voleur/Voleur0003.png" id="7_oyfmf"]
+[ext_resource type="Texture2D" uid="uid://dnbdq4unuc5am" path="res://sprites/Voleur/Voleur0019.png" id="8_8wkq4"]
+[ext_resource type="Texture2D" uid="uid://bnfor68emm6sm" path="res://sprites/Voleur/Voleur0020.png" id="9_1prb0"]
+[ext_resource type="Texture2D" uid="uid://brogj4vdpg40r" path="res://sprites/Voleur/Voleur0021.png" id="10_if8cu"]
+[ext_resource type="Texture2D" uid="uid://c1mg36waaguxu" path="res://sprites/Voleur/Voleur0022.png" id="11_m3v3v"]
+[ext_resource type="Texture2D" uid="uid://dr7wveveudel8" path="res://sprites/Voleur/Voleur0015.png" id="12_r7ghp"]
+[ext_resource type="Texture2D" uid="uid://4vrgobkgng7h" path="res://sprites/Voleur/Voleur0016.png" id="13_l7xlf"]
+[ext_resource type="Texture2D" uid="uid://bgcdd5r1xrnxq" path="res://sprites/Voleur/Voleur0017.png" id="14_7g4dj"]
+[ext_resource type="Texture2D" uid="uid://bn0hdkt5ee80w" path="res://sprites/Voleur/Voleur0018.png" id="15_hyhwk"]
+[ext_resource type="Texture2D" uid="uid://du6mtfuusx77y" path="res://sprites/Voleur/Voleur0007.png" id="16_msaiv"]
+[ext_resource type="Texture2D" uid="uid://dn87mkafuwwqw" path="res://sprites/Voleur/Voleur0008.png" id="17_6fhf6"]
+[ext_resource type="Texture2D" uid="uid://cfw7ixoasju8g" path="res://sprites/Voleur/Voleur0009.png" id="18_hd66s"]
+[ext_resource type="Texture2D" uid="uid://b8np4mcdkmtum" path="res://sprites/Voleur/Voleur0010.png" id="19_7x3bq"]
+[ext_resource type="Texture2D" uid="uid://be7wnq25pwitn" path="res://sprites/Voleur/Voleur0011.png" id="20_peiew"]
+[ext_resource type="Texture2D" uid="uid://cokacyxxqjia4" path="res://sprites/Voleur/Voleur0012.png" id="21_dn8x2"]
+[ext_resource type="Texture2D" uid="uid://b85g4dlpe7osd" path="res://sprites/Voleur/Voleur0013.png" id="22_cbvgo"]
+[ext_resource type="Texture2D" uid="uid://dloivhurqo855" path="res://sprites/Voleur/Voleur0014.png" id="23_6nue6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_drw3a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_luy7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_htoq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1sv3h")
+}],
+"loop": true,
+"name": &"voleurAttaque",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rupvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ko0yu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mtqx5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oyfmf")
+}],
+"loop": true,
+"name": &"voleurCapeVole",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_8wkq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1prb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_if8cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_m3v3v")
+}],
+"loop": true,
+"name": &"voleurDosRunLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_r7ghp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_l7xlf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7g4dj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hyhwk")
+}],
+"loop": true,
+"name": &"voleurDosRunRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_msaiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6fhf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hd66s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7x3bq")
+}],
+"loop": true,
+"name": &"voleurRunLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_peiew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_dn8x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cbvgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_6nue6")
+}],
+"loop": true,
+"name": &"voleurRunRight",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqe3t"]
+size = Vector2(396, 476)
+
+[node name="Voleur" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_drw3a")
+animation = &"voleurAttaque"
+frame_progress = 0.275992
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 8)
+shape = SubResource("RectangleShape2D_hqe3t")

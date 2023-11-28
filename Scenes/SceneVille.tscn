@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://v2esturq1v57"]
+
+[ext_resource type="PackedScene" uid="uid://i1fw5floe1a1" path="res://ScenesChara/BooJump.tscn" id="1_f24op"]
+
+[node name="SceneVille" type="Node2D"]
+
+[node name="BooJump" parent="." instance=ExtResource("1_f24op")]
+position = Vector2(280, 168)

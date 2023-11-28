@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbgqpkcd4j3xn"
-path="res://.godot/imported/booJumpRight.png-9286a4f70190bd082f0bb48a6aeb8674.ctex"
+uid="uid://4fx4tmamvmij"
+path="res://.godot/imported/booFace.png-5b9ae47cac6c5b1292b8e5b9499287d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/boo/booJumpRight.png"
-dest_files=["res://.godot/imported/booJumpRight.png-9286a4f70190bd082f0bb48a6aeb8674.ctex"]
+source_file="res://sprites/booFace.png"
+dest_files=["res://.godot/imported/booFace.png-5b9ae47cac6c5b1292b8e5b9499287d6.ctex"]
 
 [params]
 
