@@ -233,8 +233,8 @@ radius = 38.0526
 position = Vector2(3, -39)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_nax8a")
-animation = &"booBack"
-frame_progress = 0.605655
+animation = &"booFront"
+frame_progress = 0.743072
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)

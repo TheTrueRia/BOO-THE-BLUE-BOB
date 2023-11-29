@@ -448,7 +448,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"booJumpBack",
-"speed": 11.0
+"speed": 13.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -522,7 +522,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"booJumpFace",
-"speed": 5.0
+"speed": 13.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -596,7 +596,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"booJumpLeft",
-"speed": 5.0
+"speed": 13.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -670,7 +670,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"booJumpRight",
-"speed": 11.0
+"speed": 13.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cu5vl"]
@@ -684,7 +684,8 @@ script = ExtResource("1_hii3a")
 position = Vector2(6, -31)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_fsumh")
-animation = &"booJumpFace"
+animation = &"booJumpRight"
+frame_progress = 0.690451
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 1)
