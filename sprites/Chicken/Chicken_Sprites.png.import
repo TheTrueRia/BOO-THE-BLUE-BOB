@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3qblcbrl5vb7"
-path="res://.godot/imported/booJumpLeft.png-db283857c1dba94a6c4fbadb8217465b.ctex"
+uid="uid://buw147dn41clo"
+path="res://.godot/imported/Chicken_Sprites.png-c3af9bd8432adc729def1e40c855a8e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/booJumpLeft.png"
-dest_files=["res://.godot/imported/booJumpLeft.png-db283857c1dba94a6c4fbadb8217465b.ctex"]
+source_file="res://sprites/Chicken/Chicken_Sprites.png"
+dest_files=["res://.godot/imported/Chicken_Sprites.png-c3af9bd8432adc729def1e40c855a8e3.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4fx4tmamvmij"
-path="res://.godot/imported/booFace.png-5b9ae47cac6c5b1292b8e5b9499287d6.ctex"
+uid="uid://pcpfosyddcw2"
+path="res://.godot/imported/Cow-4.png-79bbb7218af50f3cadaf395d04ff5f12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/booFace.png"
-dest_files=["res://.godot/imported/booFace.png-5b9ae47cac6c5b1292b8e5b9499287d6.ctex"]
+source_file="res://sprites/Cow/Cow-4.png"
+dest_files=["res://.godot/imported/Cow-4.png-79bbb7218af50f3cadaf395d04ff5f12.ctex"]
 
 [params]
 

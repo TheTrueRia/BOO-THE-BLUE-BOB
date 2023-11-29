@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1cn6m51pa5w4"
-path="res://.godot/imported/booLeft.png-1dd442639c202bc678b1a1dd91b0dd9a.ctex"
+uid="uid://d2nfor2y2nywq"
+path="res://.godot/imported/Chicken-5.png-40d893803d75be7760146185d936f82a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/booLeft.png"
-dest_files=["res://.godot/imported/booLeft.png-1dd442639c202bc678b1a1dd91b0dd9a.ctex"]
+source_file="res://sprites/Chicken/Chicken-5.png"
+dest_files=["res://.godot/imported/Chicken-5.png-40d893803d75be7760146185d936f82a.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=3 uid="uid://cj82438cl17qd"]
 
-[ext_resource type="Texture2D" uid="uid://duvewbumkuhg" path="res://sprites/booBack.png" id="1_gm3sc"]
+[ext_resource type="Texture2D" uid="uid://duvewbumkuhg" path="res://sprites/Boo/booBack.png" id="1_gm3sc"]
 [ext_resource type="Texture2D" path="res://sprites/Blue Idle - no slime.png" id="2_v075i"]
 [ext_resource type="Texture2D" uid="uid://c1cn6m51pa5w4" path="res://sprites/booLeft.png" id="3_jetog"]
 [ext_resource type="Texture2D" uid="uid://6bmv1po7oh5j" path="res://sprites/booRight.png" id="4_qp5rt"]

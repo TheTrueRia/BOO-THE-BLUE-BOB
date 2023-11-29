@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://b0a803rt2eqgj"]
+
+[ext_resource type="Texture2D" uid="uid://0or2jofeu2f3" path="res://sprites/Cow/Cow-3.png" id="1_uqqre"]
+[ext_resource type="Texture2D" uid="uid://pcpfosyddcw2" path="res://sprites/Cow/Cow-4.png" id="2_kn8k3"]
+[ext_resource type="Texture2D" uid="uid://u0u31fe48ggu" path="res://sprites/Cow/Cow-5.png" id="3_g3r6h"]
+[ext_resource type="Texture2D" uid="uid://kaxvxmfnb8me" path="res://sprites/Cow/Cow-1.png" id="4_x2awf"]
+[ext_resource type="Texture2D" uid="uid://g2w8sjjht61q" path="res://sprites/Cow/Cow-2.png" id="5_go8ok"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tkloa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uqqre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kn8k3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g3r6h")
+}],
+"loop": true,
+"name": &"cowWalk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_x2awf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_go8ok")
+}],
+"loop": true,
+"name": &"cowYeux",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwvjp"]
+size = Vector2(160.5, 205)
+
+[node name="Cow" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 23
+metadata/_edit_vertical_guides_ = []
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(251, 210)
+sprite_frames = SubResource("SpriteFrames_tkloa")
+animation = &"cowYeux"
+autoplay = "cowYeux"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(254.5, 217.25)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_dwvjp")
