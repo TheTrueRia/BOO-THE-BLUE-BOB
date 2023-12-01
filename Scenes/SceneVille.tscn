@@ -251,12 +251,14 @@ texture = ExtResource("2_6mw35")
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -6.75, -8, -6.75, 8, -8, 8)
 2:1/0 = 0
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:1/0/physics_layer_0/angular_velocity = 0.0
 3:1/0 = 0
 3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 6.375, -8, 6, 8, 8, 8)
 4:1/0 = 0
 4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:1/0/physics_layer_0/angular_velocity = 0.0
@@ -270,7 +272,6 @@ texture = ExtResource("2_6mw35")
 1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:2/0/physics_layer_0/angular_velocity = 0.0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.75, -8, 8, -8, 8, 8, -3.625, 8, -6.375, 3.5)
-1:2/0/physics_layer_0/polygon_0/one_way = true
 2:2/0 = 0
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
@@ -715,8 +716,8 @@ layer_1/z_index = -5
 layer_1/tile_data = PackedInt32Array(786458, 65537, 2, 786459, 131073, 2, 786460, 131073, 2, 786461, 131073, 2, 786462, 131073, 2, 786463, 131073, 2, 786464, 196609, 2, 524314, 65537, 1, 589850, 65537, 1, 655386, 65537, 1, 720922, 65537, 1, 524320, 196609, 1, 589856, 196609, 1, 655392, 196609, 1, 720928, 196609, 1, 524315, 131073, 1, 589851, 131073, 1, 655387, 131073, 1, 720923, 131073, 1, 524316, 131073, 1, 589852, 131073, 1, 655388, 131073, 1, 720924, 131073, 1, 524317, 131073, 1, 589853, 131073, 1, 655389, 131073, 1, 720925, 131073, 1, 524318, 131073, 1, 589854, 131073, 1, 655390, 131073, 1, 720926, 131073, 1, 524319, 131073, 1, 589855, 131073, 1, 655391, 131073, 1, 720927, 131073, 1)
 
 [node name="BooJump" parent="." instance=ExtResource("1_f24op")]
-visible = false
 position = Vector2(303, 135)
 
 [node name="BooImmobile" parent="." instance=ExtResource("8_dr0rr")]
+visible = false
 position = Vector2(347, 244)

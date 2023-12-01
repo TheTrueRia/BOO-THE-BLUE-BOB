@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 0.5
+var speed = 100
 @onready var animated_sprite = $AnimatedSprite2D
 
 func _process(_delta):
@@ -21,5 +21,5 @@ func _process(_delta):
 	else:
 		animated_sprite.stop()
 
-	velocity = velocity.normalized()
-	position += velocity * speed
+	velocity = velocity.normalized()*speed
+	move_and_slide()
