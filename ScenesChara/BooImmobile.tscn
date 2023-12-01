@@ -1,9 +1,10 @@
-[gd_scene load_steps=35 format=3 uid="uid://cj82438cl17qd"]
+[gd_scene load_steps=36 format=3 uid="uid://cj82438cl17qd"]
 
 [ext_resource type="Texture2D" uid="uid://duvewbumkuhg" path="res://sprites/Boo/booBack.png" id="1_gm3sc"]
-[ext_resource type="Texture2D" path="res://sprites/Blue Idle - no slime.png" id="2_v075i"]
-[ext_resource type="Texture2D" uid="uid://c1cn6m51pa5w4" path="res://sprites/booLeft.png" id="3_jetog"]
-[ext_resource type="Texture2D" uid="uid://6bmv1po7oh5j" path="res://sprites/booRight.png" id="4_qp5rt"]
+[ext_resource type="Script" path="res://ScenesChara/BooImmobile.gd" id="1_vbd77"]
+[ext_resource type="Texture2D" uid="uid://4fx4tmamvmij" path="res://sprites/Boo/booFace.png" id="2_v075i"]
+[ext_resource type="Texture2D" uid="uid://c1cn6m51pa5w4" path="res://sprites/Boo/booLeft.png" id="3_jetog"]
+[ext_resource type="Texture2D" uid="uid://6bmv1po7oh5j" path="res://sprites/Boo/booRight.png" id="4_qp5rt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_en5e5"]
 atlas = ExtResource("1_gm3sc")
@@ -225,17 +226,18 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uayp1"]
-radius = 38.0526
+radius = 7.07107
 
 [node name="BooImmobile" type="CharacterBody2D"]
+collision_mask = 4
+script = ExtResource("1_vbd77")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, -39)
-scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_nax8a")
 animation = &"booFront"
 frame_progress = 0.743072
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(2, -32)
 shape = SubResource("CircleShape2D_uayp1")
