@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 0.5
+var speed = 1
 @onready var animated_sprite = $AnimatedSprite2D
 
 func _process(_delta):
@@ -8,16 +8,16 @@ func _process(_delta):
 
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1
-		animated_sprite.play("booJumpRight")
+		animated_sprite.play("booRight")
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x -= 1
-		animated_sprite.play("booJumpLeft")
+		animated_sprite.play("booLeft")
 	elif Input.is_action_pressed("ui_up"):
 		velocity.y -= 1
-		animated_sprite.play("booJumpBack")
+		animated_sprite.play("booBack")
 	elif Input.is_action_pressed("ui_down"):
 		velocity.y += 1
-		animated_sprite.play("booJumpFace")
+		animated_sprite.play("booFront")
 	else:
 		animated_sprite.stop()
 
