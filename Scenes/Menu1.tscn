@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0uskp606ftmy"]
+
+[ext_resource type="Script" path="res://Scenes/Menu1.gd" id="1_lf22q"]
+
+[node name="Menu1" type="Node2D"]
+script = ExtResource("1_lf22q")
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 452.0
+offset_top = 445.0
+offset_right = 723.0
+offset_bottom = 539.0
+text = "Quit
+"
+
+[node name="Play" type="Button" parent="."]
+offset_left = 449.0
+offset_top = 117.0
+offset_right = 720.0
+offset_bottom = 211.0
+text = "Play
+"
+
+[node name="Credit" type="Button" parent="."]
+offset_left = 453.0
+offset_top = 333.0
+offset_right = 724.0
+offset_bottom = 427.0
+text = "Credits
+"
+
+[node name="Rules" type="Button" parent="."]
+offset_left = 450.0
+offset_top = 220.0
+offset_right = 721.0
+offset_bottom = 314.0
+text = "Rules
+"
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Credit" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="Rules" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Rules" to="." method="_on_rules_pressed"]
