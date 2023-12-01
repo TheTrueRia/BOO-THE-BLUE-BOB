@@ -719,6 +719,7 @@ layer_1/tile_data = PackedInt32Array(786458, 65537, 2, 786459, 131073, 2, 786460
 position = Vector2(303, 135)
 
 [node name="Camera2D" type="Camera2D" parent="BooJump"]
+zoom = Vector2(1.7, 1.7)
 
 [node name="BooImmobile" parent="." instance=ExtResource("8_dr0rr")]
 visible = false
