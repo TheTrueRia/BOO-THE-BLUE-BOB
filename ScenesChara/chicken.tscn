@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbyewpylqw67a"]
+[gd_scene load_steps=9 format=3 uid="uid://c53tq7jvu3fak"]
 
 [ext_resource type="Texture2D" uid="uid://bg4asa5fmicl8" path="res://sprites/Chicken/Chicken-3.png" id="1_agy7j"]
 [ext_resource type="Texture2D" uid="uid://bg7sgk3iwgps3" path="res://sprites/Chicken/Chicken-4.png" id="2_i8svf"]
@@ -35,7 +35,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"chickenYeux",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3hkyr"]
@@ -46,9 +46,8 @@ radius = 113.217
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(162, 160)
 sprite_frames = SubResource("SpriteFrames_pwpha")
-animation = &"chickenWalk"
+animation = &"chickenYeux"
 autoplay = "chickenYeux"
-frame_progress = 0.739577
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(172, 166)

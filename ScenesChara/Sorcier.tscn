@@ -132,7 +132,8 @@ size = Vector2(458, 525)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ct4h0")
-animation = &"SorcierRunRight"
+animation = &"SorcierLumière"
+autoplay = "SorcierLumière"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-8, 18)

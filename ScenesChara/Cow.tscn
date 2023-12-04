@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0a803rt2eqgj"]
+[gd_scene load_steps=8 format=3 uid="uid://g5cdoayx2yfi"]
 
 [ext_resource type="Texture2D" uid="uid://0or2jofeu2f3" path="res://sprites/Cow/Cow-3.png" id="1_uqqre"]
 [ext_resource type="Texture2D" uid="uid://pcpfosyddcw2" path="res://sprites/Cow/Cow-4.png" id="2_kn8k3"]
@@ -31,7 +31,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"cowYeux",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwvjp"]
