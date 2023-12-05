@@ -48751,5 +48751,3 @@ position = Vector2(897, 208)
 scale = Vector2(0.8, 0.8)
 
 [connection signal="body_entered" from="sorcierArea" to="textSorcier" method="_on_sorcier_area_body_entered"]
-[connection signal="body_entered" from="sorcierArea" to="sorcierArea" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="sorcierArea" to="sorcierArea" method="_on_Area2D_body_exited"]
