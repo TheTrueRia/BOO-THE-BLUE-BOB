@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name BooJump
 var speed = 100
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -23,3 +23,5 @@ func _process(_delta):
 
 	velocity = velocity.normalized()*speed
 	move_and_slide()
+
+

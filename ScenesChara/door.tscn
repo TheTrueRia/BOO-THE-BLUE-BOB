@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxd5usnl0vtgg"]
+
+[ext_resource type="Texture2D" uid="uid://fm5l1vemw7ox" path="res://tileset/Door1_pipo.png" id="1_8pc03"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buodv"]
+atlas = ExtResource("1_8pc03")
+region = Rect2(0, 192, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwbvs"]
+atlas = ExtResource("1_8pc03")
+region = Rect2(32, 192, 32, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iohpv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buodv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwbvs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wq4v"]
+size = Vector2(31, 55)
+
+[node name="door" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_iohpv")
+autoplay = "default"
+frame = 1
+frame_progress = 0.818429
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 16.5)
+shape = SubResource("RectangleShape2D_0wq4v")

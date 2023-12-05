@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://1upnm7pswuxr"]
+
+[node name="textSorcier" type="Label"]
+offset_right = 1602.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 20
+text = "Par les mystères de l'occulte et les portails des dimensions, ma porte reste scellée! 
+Ô forces de l'au-delà, je suis captif dans mon propre sanctuaire! 
+À tous ceux qui entendent mon appel, prêtez-moi votre aide! 
+"
+horizontal_alignment = 1
