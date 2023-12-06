@@ -31,9 +31,7 @@ size = Vector2(31, 55)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iohpv")
-autoplay = "default"
-frame = 1
-frame_progress = 0.818429
+frame_progress = 0.49801
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 16.5)

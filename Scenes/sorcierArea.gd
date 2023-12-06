@@ -1,9 +1,9 @@
 extends Area2D
 
-var label : Label
+var label 
 
 func _ready():
-	label =  $"../textSorcier"
+	label =  $"../DialogueSorcier"
    
 func _on_Area2D_body_entered(body):
 	if body.name == "BooJump":
