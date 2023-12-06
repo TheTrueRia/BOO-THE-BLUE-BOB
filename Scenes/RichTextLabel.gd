@@ -1,4 +1,5 @@
-extends Label
+extends RichTextLabel
+
 
 func _ready():
 	hide()  # Mask le label au début
