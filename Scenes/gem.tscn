@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg7nobpqcos0v"]
+
+[ext_resource type="Texture2D" uid="uid://dcuar1hi5ojys" path="res://sprites/Gems/GoldGem.png" id="1_nj0uf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u0gt2"]
+radius = 40.0
+height = 146.0
+
+[node name="gem" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_nj0uf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_u0gt2")
