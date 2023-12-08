@@ -1,11 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://c77gi7qe83y0v"]
+[gd_scene load_steps=4 format=3 uid="uid://c77gi7qe83y0v"]
 
 [ext_resource type="FontFile" uid="uid://chu2xt61e6xck" path="res://arcadeclassic/ARCADECLASSIC.TTF" id="1_2vqld"]
+[ext_resource type="Texture2D" uid="uid://hxkvgf25ehde" path="res://tileset/bulle.png" id="2_0arjf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ka7f"]
 size = Vector2(105, 57)
 
 [node name="ThieftArea" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1, -23)
+scale = Vector2(0.125, 0.070529)
+texture = ExtResource("2_0arjf")
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(51.5, 28.5)
@@ -13,11 +21,10 @@ shape = SubResource("RectangleShape2D_1ka7f")
 
 [node name="dialogue" type="RichTextLabel" parent="."]
 visible = false
-offset_left = 2.0
-offset_top = -23.0
-offset_right = 114.0
-offset_bottom = 1.0
+offset_left = 4.0
+offset_top = -20.0
+offset_right = 126.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_2vqld")
-text = "Press D to talk"
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
+theme_override_font_sizes/normal_font_size = 13
+text = "Press  D  to   talk"
