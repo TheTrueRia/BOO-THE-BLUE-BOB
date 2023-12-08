@@ -8,7 +8,8 @@ func _ready():
 
 func _on_sorcier_area_body_entered(body):
 	if body.name == "BooJump":
-		show()
 		var t=Texture.new()
 		t=load("res://tileset/bulle.png")
-		add_image(t,10,10)
+		add_image(t, 524, 198)
+		show()
+		
