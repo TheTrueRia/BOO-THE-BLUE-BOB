@@ -28,6 +28,7 @@ animations = [{
 size = Vector2(31, 55)
 
 [node name="door" type="CharacterBody2D"]
+z_index = 4
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iohpv")
