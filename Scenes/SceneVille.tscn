@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://v2esturq1v57"]
+[gd_scene load_steps=36 format=3 uid="uid://v2esturq1v57"]
 
 [ext_resource type="Texture2D" uid="uid://cygoiktn8rvck" path="res://tileset/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_er0uc"]
 [ext_resource type="PackedScene" uid="uid://i1fw5floe1a1" path="res://ScenesChara/BooJump.tscn" id="1_f24op"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://dtgj1oro2xq43" path="res://Scenes/sorcierArea.tscn" id="20_thj6n"]
 [ext_resource type="PackedScene" uid="uid://dg7nobpqcos0v" path="res://Scenes/gem.tscn" id="21_r41cf"]
 [ext_resource type="Script" path="res://Scenes/gem.gd" id="22_x7bsm"]
+[ext_resource type="PackedScene" uid="uid://c77gi7qe83y0v" path="res://Scenes/ThieftArea.tscn" id="23_28y36"]
+[ext_resource type="Script" path="res://Scenes/ThieftArea.gd" id="24_t5kmu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tq0jd"]
 texture = ExtResource("1_er0uc")
@@ -48884,8 +48886,15 @@ position = Vector2(356, 477)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("22_x7bsm")
 
+[node name="ThieftArea" parent="." instance=ExtResource("23_28y36")]
+z_index = 2
+position = Vector2(261, 444)
+script = ExtResource("24_t5kmu")
+
 [connection signal="body_entered" from="sorcierArea" to="sorcierArea" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="sorcierArea" to="DialogueSorcier" method="_on_sorcier_area_body_entered"]
 [connection signal="body_exited" from="sorcierArea" to="sorcierArea" method="_on_Area2D_body_exited"]
 [connection signal="body_entered" from="gem/gem" to="BooJump" method="_on_gem_body_entered"]
 [connection signal="body_entered" from="gem/gem" to="gem/gem" method="_on_body_entered"]
+[connection signal="body_entered" from="ThieftArea" to="ThieftArea" method="_on_body_entered"]
+[connection signal="body_exited" from="ThieftArea" to="ThieftArea" method="_on_body_exited"]
