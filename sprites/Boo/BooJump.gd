@@ -28,3 +28,11 @@ func _process(_delta):
 func _on_gem_body_entered(body):
 	gem -= 1
 	
+
+
+func _on_thieft_area_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_thieft_area_body_exited(body):
+	pass # Replace with function body.
