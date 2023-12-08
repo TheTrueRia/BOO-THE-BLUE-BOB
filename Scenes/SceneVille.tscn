@@ -28662,7 +28662,6 @@ texture = ExtResource("7_veat2")
 14:146/0 = 0
 14:146/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 14:146/0/physics_layer_0/angular_velocity = 0.0
-14:146/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:146/0 = 0
 15:146/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:146/0/physics_layer_0/angular_velocity = 0.0
@@ -28712,7 +28711,6 @@ texture = ExtResource("7_veat2")
 14:147/0 = 0
 14:147/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 14:147/0/physics_layer_0/angular_velocity = 0.0
-14:147/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:147/0 = 0
 15:147/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:147/0/physics_layer_0/angular_velocity = 0.0
@@ -48863,13 +48861,14 @@ scale = Vector2(0.1, 0.1)
 position = Vector2(896, 206)
 
 [node name="DialogueSorcier" type="RichTextLabel" parent="."]
-visible = false
-z_index = 2
-offset_left = 660.0
-offset_top = 220.0
-offset_right = 1129.0
-offset_bottom = 381.0
+z_index = 4
+offset_left = 763.0
+offset_top = 266.0
+offset_right = 1054.0
+offset_bottom = 316.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("19_q1nee")
+theme_override_font_sizes/normal_font_size = 0
 text = "Par les mystères de l'occulte et les portails des dimensions, ma porte reste scellée! 
 Ô forces de l'au-delà, je suis captif dans mon propre sanctuaire! 
 À tous ceux qui entendent mon appel, prêtez-moi votre aide! 
