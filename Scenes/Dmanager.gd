@@ -7,8 +7,20 @@ var current_line_index=0
 var text_box
 var text_box_position:Vector2
 
+var lines : Array
+var Pos : Array[Vector2]
+
 var is_dialog_active = false
 var can_advance_line =false
+
+var nbr_of_dialog_left = 0
+
+func Multiple_Dialog(Position: Array[Vector2],Lines: Array, nbr_of_dialog:int):
+	nbr_of_dialog_left=nbr_of_dialog
+	Pos=Position
+	lines=Lines
+	if nbr_of_dialog_left>0:
+		start_dialog(Pos[nbr_of_dialog_left-1],lines[nbr_of_dialog_left-1])
 
 func start_dialog(position:Vector2, lines: Array[String]):
 	if is_dialog_active:
@@ -37,6 +49,9 @@ func _unhandled_input(event):
 		if current_line_index>=dialog_lines.size():
 			is_dialog_active=false
 			current_line_index=0
+			if nbr_of_dialog_left>0:
+				nbr_of_dialog_left=-1
+				start_dialog(Pos[nbr_of_dialog_left-1],lines[nbr_of_dialog_left-1])
 			return
 		_show_text_box()
 

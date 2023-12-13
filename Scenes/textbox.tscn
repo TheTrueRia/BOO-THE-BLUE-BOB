@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://chu2xt61e6xck" path="res://arcadeclassic/ARCADECLASSIC.TTF" id="3_glse2"]
 
 [node name="textbox" type="MarginContainer"]
+z_index = 8
 offset_right = 64.0
 offset_bottom = 16.0
 script = ExtResource("1_lfxe0")
