@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://clemimgmj4hbp"]
+
+[ext_resource type="Script" path="res://Scenes/DoorArea.gd" id="1_52g05"]
+[ext_resource type="Texture2D" uid="uid://hxkvgf25ehde" path="res://tileset/bulle.png" id="1_w8dsj"]
+[ext_resource type="FontFile" uid="uid://chu2xt61e6xck" path="res://arcadeclassic/ARCADECLASSIC.TTF" id="3_12d54"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu88s"]
+size = Vector2(41, 74.5)
+
+[node name="DoorArea" type="Area2D"]
+script = ExtResource("1_52g05")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20.5, 38.75)
+shape = SubResource("RectangleShape2D_qu88s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+z_index = 3
+position = Vector2(147, -38.25)
+scale = Vector2(0.176594, 0.244262)
+texture = ExtResource("1_w8dsj")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 3
+offset_left = 76.0
+offset_top = -75.0
+offset_right = 227.0
+offset_bottom = -9.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_12d54")
+text = "This Door is locked, 
+perhaps someone 
+can unlock it ! "

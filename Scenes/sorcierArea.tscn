@@ -4,19 +4,29 @@
 [ext_resource type="Texture2D" uid="uid://hxkvgf25ehde" path="res://tileset/bulle.png" id="2_2tdeu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8hka"]
-size = Vector2(52, 69)
+size = Vector2(46, 79)
 
 [node name="sorcierArea" type="Area2D"]
 z_index = 3
 script = ExtResource("1_jueok")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 4.5)
+position = Vector2(-5, 9.5)
 shape = SubResource("RectangleShape2D_e8hka")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 z_index = 3
-position = Vector2(5, 89)
-scale = Vector2(0.333015, 0.253149)
+position = Vector2(-8, -59)
+scale = Vector2(0.158148, 0.11346)
 texture = ExtResource("2_2tdeu")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 3
+offset_left = -64.0
+offset_top = -73.0
+offset_right = 48.0
+offset_bottom = -47.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Press D to talk"

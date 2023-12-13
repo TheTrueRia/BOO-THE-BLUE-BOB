@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://v2esturq1v57"]
+[gd_scene load_steps=35 format=3 uid="uid://v2esturq1v57"]
 
 [ext_resource type="Texture2D" uid="uid://cygoiktn8rvck" path="res://tileset/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_er0uc"]
 [ext_resource type="PackedScene" uid="uid://i1fw5floe1a1" path="res://ScenesChara/BooJump.tscn" id="1_f24op"]
@@ -17,12 +17,11 @@
 [ext_resource type="PackedScene" uid="uid://c53tq7jvu3fak" path="res://ScenesChara/chicken.tscn" id="15_pxqf4"]
 [ext_resource type="PackedScene" uid="uid://b2ml0bwqvxh5d" path="res://ScenesChara/Voleur.tscn" id="16_6w103"]
 [ext_resource type="PackedScene" uid="uid://bxd5usnl0vtgg" path="res://ScenesChara/door.tscn" id="17_3mn86"]
-[ext_resource type="FontFile" uid="uid://chu2xt61e6xck" path="res://arcadeclassic/ARCADECLASSIC.TTF" id="19_q1nee"]
-[ext_resource type="Script" path="res://Scenes/RichTextLabel.gd" id="20_pwmy0"]
 [ext_resource type="PackedScene" uid="uid://dtgj1oro2xq43" path="res://Scenes/sorcierArea.tscn" id="20_thj6n"]
 [ext_resource type="PackedScene" uid="uid://dg7nobpqcos0v" path="res://Scenes/gem.tscn" id="21_r41cf"]
 [ext_resource type="Script" path="res://Scenes/gem.gd" id="22_x7bsm"]
 [ext_resource type="PackedScene" uid="uid://c77gi7qe83y0v" path="res://Scenes/ThieftArea.tscn" id="23_28y36"]
+[ext_resource type="PackedScene" uid="uid://clemimgmj4hbp" path="res://Scenes/DoorArea.tscn" id="23_sbkh5"]
 [ext_resource type="Script" path="res://Scenes/ThieftArea.gd" id="24_t5kmu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tq0jd"]
@@ -48835,7 +48834,7 @@ scale = Vector2(0.9, 0.9)
 
 [node name="Sorcier" parent="." instance=ExtResource("13_a75nr")]
 z_index = 1
-position = Vector2(896, 208)
+position = Vector2(881, 214)
 scale = Vector2(0.1, 0.1)
 
 [node name="BooJump" parent="." instance=ExtResource("1_f24op")]
@@ -48869,23 +48868,7 @@ scale = Vector2(0.1, 0.1)
 
 [node name="sorcierArea" parent="." instance=ExtResource("20_thj6n")]
 z_index = 4
-position = Vector2(919, 196)
-
-[node name="DialogueSorcier" type="RichTextLabel" parent="."]
-visible = false
-z_index = 6
-offset_left = 762.0
-offset_top = 266.0
-offset_right = 1053.0
-offset_bottom = 316.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("19_q1nee")
-theme_override_font_sizes/normal_font_size = 0
-text = "Par les mystères de l'occulte et les portails des dimensions, ma porte reste scellée! 
-Ô forces de l'au-delà, je suis captif dans mon propre sanctuaire! 
-À tous ceux qui entendent mon appel, prêtez-moi votre aide! 
-"
-script = ExtResource("20_pwmy0")
+position = Vector2(882, 221)
 
 [node name="gem" type="Node2D" parent="."]
 
@@ -48900,10 +48883,14 @@ z_index = 2
 position = Vector2(260, 447)
 script = ExtResource("24_t5kmu")
 
-[connection signal="body_entered" from="sorcierArea" to="sorcierArea" method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="sorcierArea" to="DialogueSorcier" method="_on_sorcier_area_body_entered"]
-[connection signal="body_exited" from="sorcierArea" to="sorcierArea" method="_on_Area2D_body_exited"]
+[node name="DoorArea" parent="." instance=ExtResource("23_sbkh5")]
+position = Vector2(896, 171)
+
+[connection signal="body_entered" from="sorcierArea" to="sorcierArea" method="_on_body_entered"]
+[connection signal="body_exited" from="sorcierArea" to="sorcierArea" method="_on_body_exited"]
 [connection signal="body_entered" from="gem/gem" to="BooJump" method="_on_gem_body_entered"]
 [connection signal="body_entered" from="gem/gem" to="gem/gem" method="_on_body_entered"]
 [connection signal="body_entered" from="ThieftArea" to="ThieftArea" method="_on_body_entered"]
 [connection signal="body_exited" from="ThieftArea" to="ThieftArea" method="_on_body_exited"]
+[connection signal="body_entered" from="DoorArea" to="DoorArea" method="_on_body_entered"]
+[connection signal="body_exited" from="DoorArea" to="DoorArea" method="_on_body_exited"]

@@ -49,8 +49,8 @@ func _unhandled_input(event):
 		if current_line_index>=dialog_lines.size():
 			is_dialog_active=false
 			current_line_index=0
+			nbr_of_dialog_left=-1
 			if nbr_of_dialog_left>0:
-				nbr_of_dialog_left=-1
 				start_dialog(Pos[nbr_of_dialog_left-1],lines[nbr_of_dialog_left-1])
 			return
 		_show_text_box()
