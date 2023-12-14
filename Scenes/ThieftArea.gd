@@ -1,8 +1,13 @@
 extends Area2D
 
+class_name Thieft_Area
+
+
+
 var label
 var image
 var in_area=false
+var dialog_finish
 var boo = CharacterBody2D
 var dialog_has_been_display
 var nbr_of_dialog=2
@@ -59,4 +64,6 @@ func _on_body_exited(body):
 		label.hide()
 		image.hide()
 		in_area=false
+		if(dialog_has_been_display):
+			dialog_finish=true
 		dialog_has_been_display= false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://v2esturq1v57"]
+[gd_scene load_steps=34 format=3 uid="uid://v2esturq1v57"]
 
 [ext_resource type="Texture2D" uid="uid://cygoiktn8rvck" path="res://tileset/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_er0uc"]
 [ext_resource type="PackedScene" uid="uid://i1fw5floe1a1" path="res://ScenesChara/BooJump.tscn" id="1_f24op"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://c8yq5cjvsj881" path="res://tileset/Fenêtres.png" id="6_4xa88"]
 [ext_resource type="Texture2D" uid="uid://b24elgnwqpbp6" path="res://tileset/medieval/thatched-roof.png" id="6_bb0ns"]
 [ext_resource type="Texture2D" uid="uid://cxdwj1x7x13vk" path="res://tileset/Trucs cools.png" id="7_veat2"]
-[ext_resource type="PackedScene" uid="uid://cj82438cl17qd" path="res://ScenesChara/BooImmobile.tscn" id="8_dr0rr"]
 [ext_resource type="PackedScene" uid="uid://vatoxglsospp" path="res://ScenesChara/Sorcier.tscn" id="13_a75nr"]
 [ext_resource type="PackedScene" uid="uid://g5cdoayx2yfi" path="res://ScenesChara/Cow.tscn" id="14_c7l5h"]
 [ext_resource type="PackedScene" uid="uid://c53tq7jvu3fak" path="res://ScenesChara/chicken.tscn" id="15_pxqf4"]
@@ -48843,13 +48842,6 @@ position = Vector2(426, 433)
 [node name="Camera2D" type="Camera2D" parent="BooJump"]
 zoom = Vector2(2, 2)
 
-[node name="BooImmobile" parent="." instance=ExtResource("8_dr0rr")]
-visible = false
-position = Vector2(347, 244)
-
-[node name="Camera2D" type="Camera2D" parent="BooImmobile"]
-zoom = Vector2(2, 2)
-
 [node name="Cow" parent="." instance=ExtResource("14_c7l5h")]
 position = Vector2(925, 489)
 scale = Vector2(0.2, 0.2)
@@ -48863,7 +48855,7 @@ position = Vector2(931, 456)
 scale = Vector2(0.1, 0.1)
 
 [node name="Voleur" parent="." instance=ExtResource("16_6w103")]
-position = Vector2(312, 469)
+position = Vector2(311, 511)
 scale = Vector2(0.1, 0.1)
 
 [node name="sorcierArea" parent="." instance=ExtResource("20_thj6n")]
