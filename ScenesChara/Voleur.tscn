@@ -128,7 +128,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqe3t"]
-size = Vector2(396, 476)
+size = Vector2(542, 476)
 
 [node name="Voleur" type="CharacterBody2D"]
 collision_mask = 4
@@ -141,5 +141,5 @@ animation = &"voleurDosRunLeft"
 autoplay = "voleurCapeVole"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(25, -418)
+position = Vector2(23, -418)
 shape = SubResource("RectangleShape2D_hqe3t")
