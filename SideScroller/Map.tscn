@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://4wd4rbd1tm4r"]
+
+[ext_resource type="PackedScene" uid="uid://83uxqj3mrsm7" path="res://SideScroller/Player.tscn" id="1_0d0xu"]
+[ext_resource type="Script" path="res://SideScroller/Map.gd" id="1_8ycy3"]
+[ext_resource type="PackedScene" uid="uid://dbtjty88ctwq4" path="res://SideScroller/ground.tscn" id="2_a4mri"]
+[ext_resource type="PackedScene" uid="uid://t3rgpti77v3w" path="res://SideScroller/parallax_background.tscn" id="3_hcmcb"]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_8ycy3")
+
+[node name="Player" parent="." instance=ExtResource("1_0d0xu")]
+position = Vector2(106, 460)
+
+[node name="ground" parent="." instance=ExtResource("2_a4mri")]
+position = Vector2(1, 0)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_hcmcb")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(588, 320)
