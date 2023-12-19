@@ -15,12 +15,10 @@ func _process(delta):
 		global_position = master.array_pos[10]
 		if(master.velocity.x==0 && master.velocity.y == 0):
 			animated_sprite.play("voleurCapeVole")
-		elif(master.velocity.x<=0 && master.velocity.y < 0):
-				animated_sprite.play("voleurDosRunLeft")
+		elif(master.velocity.y < 0):
+				animated_sprite.play("voleurDosRun")
 		elif(master.velocity.x<=0 && master.velocity.y >= 0):
 				animated_sprite.play("voleurRunLeft")
-		elif(master.velocity.x>0 && master.velocity.y < 0):
-				animated_sprite.play("voleurDosRunRight")
 		else:
 			animated_sprite.play("voleurRunRight")
 
