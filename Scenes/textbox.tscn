@@ -1,14 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7rajk4e15esg"]
+[gd_scene load_steps=4 format=3 uid="uid://dxu6tfp0uy8e"]
 
 [ext_resource type="Texture2D" uid="uid://c7sady38xbl55" path="res://tileset/bullePetite.png" id="1_f6quf"]
-[ext_resource type="Script" path="res://Scenes/textbox.gd" id="1_lfxe0"]
+[ext_resource type="Script" path="res://Script/textbox.gd" id="1_f242m"]
 [ext_resource type="FontFile" uid="uid://chu2xt61e6xck" path="res://arcadeclassic/ARCADECLASSIC.TTF" id="3_glse2"]
 
 [node name="textbox" type="MarginContainer"]
 z_index = 8
 offset_right = 64.0
 offset_bottom = 16.0
-script = ExtResource("1_lfxe0")
+script = ExtResource("1_f242m")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 2

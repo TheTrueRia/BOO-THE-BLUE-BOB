@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://clemimgmj4hbp"]
 
-[ext_resource type="Script" path="res://Scenes/DoorArea.gd" id="1_52g05"]
 [ext_resource type="Texture2D" uid="uid://hxkvgf25ehde" path="res://tileset/bulle.png" id="1_w8dsj"]
+[ext_resource type="Script" path="res://Script/DoorArea.gd" id="1_x08ka"]
 [ext_resource type="FontFile" uid="uid://chu2xt61e6xck" path="res://arcadeclassic/ARCADECLASSIC.TTF" id="3_12d54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qu88s"]
 size = Vector2(41, 74.5)
 
 [node name="DoorArea" type="Area2D"]
-script = ExtResource("1_52g05")
+script = ExtResource("1_x08ka")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(20.5, 38.75)

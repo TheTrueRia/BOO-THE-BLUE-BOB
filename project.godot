@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Boo The Blue Bob"
-run/main_scene="res://SideScroller/Map.tscn"
+run/main_scene="res://Scenes/SceneVille.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Dmanager="*res://Scenes/Dmanager.gd"
+Dmanager="*res://Script/Dmanager.gd"
 
 [input]
 

@@ -16,12 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://c53tq7jvu3fak" path="res://ScenesChara/chicken.tscn" id="15_pxqf4"]
 [ext_resource type="PackedScene" uid="uid://b2ml0bwqvxh5d" path="res://ScenesChara/Voleur.tscn" id="16_6w103"]
 [ext_resource type="PackedScene" uid="uid://bxd5usnl0vtgg" path="res://ScenesChara/door.tscn" id="17_3mn86"]
+[ext_resource type="Script" path="res://Script/gem.gd" id="19_5w2jk"]
 [ext_resource type="PackedScene" uid="uid://dtgj1oro2xq43" path="res://Scenes/sorcierArea.tscn" id="20_thj6n"]
+[ext_resource type="Script" path="res://Script/ThieftArea.gd" id="21_7n8xd"]
 [ext_resource type="PackedScene" uid="uid://dg7nobpqcos0v" path="res://Scenes/gem.tscn" id="21_r41cf"]
-[ext_resource type="Script" path="res://Scenes/gem.gd" id="22_x7bsm"]
 [ext_resource type="PackedScene" uid="uid://c77gi7qe83y0v" path="res://Scenes/ThieftArea.tscn" id="23_28y36"]
-[ext_resource type="PackedScene" path="res://Scenes/DoorArea.tscn" id="23_sbkh5"]
-[ext_resource type="Script" path="res://Scenes/ThieftArea.gd" id="24_t5kmu"]
+[ext_resource type="PackedScene" uid="uid://clemimgmj4hbp" path="res://Scenes/DoorArea.tscn" id="23_sbkh5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tq0jd"]
 texture = ExtResource("1_er0uc")
@@ -48908,12 +48908,12 @@ position = Vector2(882, 221)
 z_index = 2
 position = Vector2(356, 477)
 scale = Vector2(0.1, 0.1)
-script = ExtResource("22_x7bsm")
+script = ExtResource("19_5w2jk")
 
 [node name="ThieftArea" parent="." instance=ExtResource("23_28y36")]
 z_index = 2
 position = Vector2(272, 443)
-script = ExtResource("24_t5kmu")
+script = ExtResource("21_7n8xd")
 
 [node name="DoorArea" parent="." instance=ExtResource("23_sbkh5")]
 position = Vector2(896, 171)
