@@ -2,7 +2,7 @@ extends Node2D
 
 var screen_size: Vector2i
 var speed : float
-const START_SPEED : float = 10.0
+const START_SPEED : float = 5.0
 const MAX_SPEED : float = 25.0
 
 
@@ -18,8 +18,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	speed = MAX_SPEED
-	$Player.position.x+= speed
+	speed = START_SPEED
+	$booCombat.position.x+= speed
 	$Camera2D.position.x+=speed
 	
 	
