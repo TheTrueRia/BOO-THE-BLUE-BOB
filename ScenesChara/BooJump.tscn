@@ -685,8 +685,7 @@ script = ExtResource("1_hii3a")
 position = Vector2(6, -32.5)
 scale = Vector2(1, 0.90625)
 sprite_frames = SubResource("SpriteFrames_fsumh")
-animation = &"booJumpRight"
-frame_progress = 0.906632
+animation = &"booJumpBack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5, -26)
