@@ -22,10 +22,10 @@ func Multiple_Dialog(Position: Array[Vector2],Lines: Array, nbr_of_dialog:int):
 	if nbr_of_dialog_left>0:
 		start_dialog(Pos[nbr_of_dialog_left-1],lines[nbr_of_dialog_left-1])
 
-func start_dialog(position:Vector2, lines: Array[String]):
+func start_dialog(position:Vector2, Lines: Array[String]):
 	if is_dialog_active:
 		return
-	dialog_lines=lines
+	dialog_lines=Lines
 	text_box_position=position
 	_show_text_box()
 	is_dialog_active=true
@@ -49,7 +49,7 @@ func _unhandled_input(event):
 		if current_line_index>=dialog_lines.size():
 			is_dialog_active=false
 			current_line_index=0
-			nbr_of_dialog_left=-1
+			nbr_of_dialog_left-=1
 			if nbr_of_dialog_left>0:
 				start_dialog(Pos[nbr_of_dialog_left-1],lines[nbr_of_dialog_left-1])
 			return
