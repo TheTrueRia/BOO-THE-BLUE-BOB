@@ -1,38 +1,69 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxd5usnl0vtgg"]
+[gd_scene load_steps=9 format=3 uid="uid://bxd5usnl0vtgg"]
 
 [ext_resource type="Texture2D" uid="uid://fm5l1vemw7ox" path="res://tileset/Door1_pipo.png" id="1_8pc03"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_buodv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wufj"]
 atlas = ExtResource("1_8pc03")
 region = Rect2(0, 192, 32, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xwbvs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxe4j"]
+atlas = ExtResource("1_8pc03")
+region = Rect2(64, 192, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnouc"]
+atlas = ExtResource("1_8pc03")
+region = Rect2(0, 192, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psnp0"]
 atlas = ExtResource("1_8pc03")
 region = Rect2(32, 192, 32, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tobuk"]
+atlas = ExtResource("1_8pc03")
+region = Rect2(64, 192, 32, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iohpv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_buodv")
+"texture": SubResource("AtlasTexture_4wufj")
+}],
+"loop": false,
+"name": &"closedDoor",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxe4j")
+}],
+"loop": false,
+"name": &"openDoor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnouc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xwbvs")
+"texture": SubResource("AtlasTexture_psnp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tobuk")
 }],
-"loop": true,
-"name": &"default",
-"speed": 1.0
+"loop": false,
+"name": &"opening",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wq4v"]
 size = Vector2(31, 55)
 
-[node name="door" type="CharacterBody2D"]
+[node name="door" type="StaticBody2D"]
 z_index = 4
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iohpv")
-frame_progress = 0.49801
+animation = &"openDoor"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 16.5)
