@@ -24,8 +24,7 @@ func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if Input.is_action_pressed("ui_right"):
 		animated_sprite.play("BooDroite")
-	else: 
-		animated_sprite.play("BooGauche")
+	
 	if direction:
 		velocity.x = direction * SPEED
 	else:
