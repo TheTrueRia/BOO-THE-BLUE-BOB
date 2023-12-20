@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhearyboott62"
-path="res://.godot/imported/potion.png-e55922c173fa2b1221120a963b47c884.ctex"
+uid="uid://f8hofntbwgpq"
+path="res://.godot/imported/Voleur0024.png-906653512f1eab4c289cdc86a1c84c59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/potion.png"
-dest_files=["res://.godot/imported/potion.png-e55922c173fa2b1221120a963b47c884.ctex"]
+source_file="res://sprites/Voleur/Voleur0024.png"
+dest_files=["res://.godot/imported/Voleur0024.png-906653512f1eab4c289cdc86a1c84c59.ctex"]
 
 [params]
 

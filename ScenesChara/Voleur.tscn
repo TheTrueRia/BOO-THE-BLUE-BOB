@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b2ml0bwqvxh5d"]
+[gd_scene load_steps=29 format=3 uid="uid://b2ml0bwqvxh5d"]
 
 [ext_resource type="Script" path="res://ScenesChara/Voleur.gd" id="1_il3bl"]
 [ext_resource type="Texture2D" uid="uid://ypwffnid5at1" path="res://sprites/Voleur/Voleur0004.png" id="1_luy7x"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cncr2ujx1udc5" path="res://sprites/Voleur/Voleur0003.png" id="7_oyfmf"]
 [ext_resource type="Texture2D" uid="uid://dnbdq4unuc5am" path="res://sprites/Voleur/Voleur0019.png" id="8_8wkq4"]
 [ext_resource type="Texture2D" uid="uid://bnfor68emm6sm" path="res://sprites/Voleur/Voleur0020.png" id="9_1prb0"]
+[ext_resource type="Texture2D" uid="uid://cy1o15ctc2fmn" path="res://sprites/Voleur/Voleur0023.png" id="9_cr8wi"]
+[ext_resource type="Texture2D" uid="uid://f8hofntbwgpq" path="res://sprites/Voleur/Voleur0024.png" id="10_hwcxe"]
 [ext_resource type="Texture2D" uid="uid://brogj4vdpg40r" path="res://sprites/Voleur/Voleur0021.png" id="10_if8cu"]
 [ext_resource type="Texture2D" uid="uid://c1mg36waaguxu" path="res://sprites/Voleur/Voleur0022.png" id="11_m3v3v"]
 [ext_resource type="Texture2D" uid="uid://dr7wveveudel8" path="res://sprites/Voleur/Voleur0015.png" id="12_r7ghp"]
@@ -56,6 +58,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"voleurCapeVole",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_cr8wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hwcxe")
+}],
+"loop": true,
+"name": &"voleurDosRun",
 "speed": 5.0
 }, {
 "frames": [{
@@ -135,10 +148,12 @@ collision_mask = 4
 script = ExtResource("1_il3bl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(40, -436)
+position = Vector2(16.5, -429.5)
+scale = Vector2(1, 0.915)
 sprite_frames = SubResource("SpriteFrames_drw3a")
-animation = &"voleurDosRunLeft"
+animation = &"voleurDosRun"
 autoplay = "voleurCapeVole"
+frame_progress = 0.676491
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(23, -418)

@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Dmanager="*res://Scenes/Dmanager.gd"
+Dmanager="*res://Script/Dmanager.gd"
 
 [input]
 

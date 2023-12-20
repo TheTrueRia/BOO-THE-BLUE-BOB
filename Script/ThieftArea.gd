@@ -10,6 +10,7 @@ var in_area=false
 var dialog_finish
 var boo = CharacterBody2D
 var dialog_has_been_display
+
 var nbr_of_dialog=2
 var All_pos: Array[Vector2]
 
