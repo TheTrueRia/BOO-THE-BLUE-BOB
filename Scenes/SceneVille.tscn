@@ -21,7 +21,7 @@
 [ext_resource type="Script" path="res://Script/ThieftArea.gd" id="21_7n8xd"]
 [ext_resource type="PackedScene" uid="uid://dg7nobpqcos0v" path="res://Scenes/gem.tscn" id="21_r41cf"]
 [ext_resource type="PackedScene" uid="uid://c77gi7qe83y0v" path="res://Scenes/ThieftArea.tscn" id="23_28y36"]
-[ext_resource type="PackedScene" uid="uid://clemimgmj4hbp" path="res://Scenes/DoorArea.tscn" id="23_sbkh5"]
+[ext_resource type="PackedScene" path="res://Scenes/DoorArea.tscn" id="23_sbkh5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tq0jd"]
 texture = ExtResource("1_er0uc")
