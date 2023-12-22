@@ -1,9 +1,11 @@
 extends CharacterBody2D
 class_name BooJump
+
 var speed = 100
 var gem = 3
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var T_area = $"../ThieftArea"
+@onready var door = $"../DoorArea"
 var array_pos :  Array[Vector2]
 var previous_position : Vector2
 var voleur_taken = false
@@ -40,10 +42,9 @@ func _process(_delta):
 
 		velocity = velocity.normalized()*speed
 		move_and_slide()
-		if(T_area.dialog_finish && T_area.in_area):
+		if(T_area.hasBeenPlayed and !door.is_open):
 			voleur_taken = true
-	
-
+			
 func _on_gem_body_entered(body):
 	gem -= 1
 	

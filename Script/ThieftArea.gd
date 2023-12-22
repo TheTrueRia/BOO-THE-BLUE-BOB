@@ -2,10 +2,9 @@ extends Area2D
 
 class_name Thieft_Area
 
-
-
 var label
 var image
+var hasBeenPlayed = false
 var in_area=false
 var dialog_finish
 var boo = CharacterBody2D
@@ -43,19 +42,20 @@ func _process(delta):
 	pass
 	
 func _unhandled_input(event):
-	if event.is_action_pressed("text"):
+	if event.is_action_pressed("text") and !hasBeenPlayed:
 		if in_area:
 			All_pos[1]=boo.global_position + Vector2(0,-75)
 			label.hide()
 			image.hide()
 			if(!dialog_has_been_display):
 				dialog_has_been_display = true
+				hasBeenPlayed = true
 				Dmanager.Multiple_Dialog(All_pos,lines,nbr_of_dialog)
 
 
 
 func _on_body_entered(body):
-	if body.name == "BooJump":
+	if body.name == "BooJump" and !hasBeenPlayed:
 		label.show()
 		image.show()
 		in_area=true
