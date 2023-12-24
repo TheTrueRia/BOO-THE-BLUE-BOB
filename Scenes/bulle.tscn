@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://fg2k8c21ii1l"]
+
+[ext_resource type="Texture2D" uid="uid://hxkvgf25ehde" path="res://tileset/bulle.png" id="1_mhmm1"]
+[ext_resource type="Script" path="res://TextFin.gd" id="2_rk1ci"]
+[ext_resource type="FontFile" uid="uid://chu2xt61e6xck" path="res://arcadeclassic/ARCADECLASSIC.TTF" id="3_3ad6g"]
+
+[node name="Bulle" type="Sprite2D"]
+position = Vector2(593, 104)
+scale = Vector2(0.843783, 0.601639)
+texture = ExtResource("1_mhmm1")
+script = ExtResource("2_rk1ci")
+
+[node name="Text" type="RichTextLabel" parent="."]
+offset_left = -433.0
+offset_top = -111.0
+offset_right = 439.0
+offset_bottom = 88.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_3ad6g")
+theme_override_font_sizes/normal_font_size = 20

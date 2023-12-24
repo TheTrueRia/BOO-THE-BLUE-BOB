@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://34ue1wwr6wsp"]
+[gd_scene load_steps=12 format=3 uid="uid://34ue1wwr6wsp"]
 
 [ext_resource type="PackedScene" uid="uid://by47c1cstu2p0" path="res://tileset/tile_map.tscn" id="1_xm2ad"]
 [ext_resource type="PackedScene" uid="uid://duwhs3hmxcr5h" path="res://ScenesChara/Guerrier.tscn" id="2_qxja8"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b6vck3x4y4s6h" path="res://Scenes/Aire2D.tscn" id="8_kviat"]
 [ext_resource type="AudioStream" uid="uid://eowsl8fixbty" path="res://AMBForst_Foret (ID 0100)_LS.mp3" id="8_w1s8u"]
 [ext_resource type="Script" path="res://SceneForêt/AllerVille.gd" id="9_es72d"]
+[ext_resource type="PackedScene" uid="uid://fg2k8c21ii1l" path="res://Scenes/bulle.tscn" id="11_m7d74"]
 
 [node name="Foret" type="Node2D"]
 
@@ -82,6 +83,12 @@ max_distance = 200000.0
 [node name="Ville" parent="." instance=ExtResource("8_kviat")]
 position = Vector2(2196, -55)
 script = ExtResource("9_es72d")
+
+[node name="Bulle" parent="." instance=ExtResource("11_m7d74")]
+visible = false
+z_index = 3
+position = Vector2(2170, -137.375)
+scale = Vector2(0.388715, 0.231967)
 
 [connection signal="body_entered" from="GuerrierArea" to="GuerrierArea" method="_on_body_entered"]
 [connection signal="body_exited" from="GuerrierArea" to="GuerrierArea" method="_on_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://v2esturq1v57"]
+[gd_scene load_steps=41 format=3 uid="uid://v2esturq1v57"]
 
 [ext_resource type="Texture2D" uid="uid://cygoiktn8rvck" path="res://tileset/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_er0uc"]
 [ext_resource type="PackedScene" uid="uid://i1fw5floe1a1" path="res://ScenesChara/BooJump.tscn" id="1_f24op"]
@@ -28,6 +28,7 @@
 [ext_resource type="AudioStream" uid="uid://cj3wm4ft4x1cs" path="res://village-theme-68229.mp3" id="24_fsyop"]
 [ext_resource type="Script" path="res://Scenes/aller_forest.gd" id="25_q4jpo"]
 [ext_resource type="Script" path="res://Scenes/AllerCombat.gd" id="26_yujjx"]
+[ext_resource type="PackedScene" uid="uid://fg2k8c21ii1l" path="res://Scenes/bulle.tscn" id="29_ti07r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tq0jd"]
 texture = ExtResource("1_er0uc")
@@ -48988,6 +48989,12 @@ script = ExtResource("25_q4jpo")
 position = Vector2(582, 362)
 scale = Vector2(1, 0.4)
 script = ExtResource("26_yujjx")
+
+[node name="Bulle" parent="." instance=ExtResource("29_ti07r")]
+visible = false
+z_index = 4
+position = Vector2(97.3125, 196.313)
+scale = Vector2(0.406871, 0.253688)
 
 [connection signal="body_entered" from="sorcierArea" to="sorcierArea" method="_on_body_entered"]
 [connection signal="body_exited" from="sorcierArea" to="sorcierArea" method="_on_body_exited"]
