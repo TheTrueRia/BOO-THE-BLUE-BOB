@@ -311,11 +311,12 @@ offset_left = 312.0
 offset_top = 17.0
 offset_right = 913.0
 offset_bottom = 147.0
-text = "		 		Les règles du donjon :
-- Collecte 8 feuilles en moins de 30 secondes pour vaincre le Red Blob
-- Ne touche pas les blobs rouges, ou tu mourras !
-- Attention, les pics sont empoisonnés : si tu en touches trop, tu perds des PVs
-Si tes PV sont à 0, retour à la case départ !"
+text = "Dungeon rules:
+- Collect 8 leaves in under 30 seconds to defeat the Red Blob
+- Don't touch the red blobs, or you'll die!
+- Beware, the spikes are poisonous: if you touch too many, you'll lose HP.
+If your HP are 0, you're back to square one!
+Press space to start"
 horizontal_alignment = 1
 script = ExtResource("14_lc5to")
 

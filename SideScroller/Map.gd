@@ -8,10 +8,12 @@ var game_over = false
 var obstacles : Array
 var last_obs
 var redBlob = preload("res://Scenes/redBlob.tscn")
+var game_running = false
 
 func new_game():
 	get_tree().paused = false
 	game_over = false
+	game_running = false
 	screen_size=get_window().size
 	$booCombat.health = 10
 	$booCombat.coins = 0
@@ -34,18 +36,22 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	speed = START_SPEED
-	$booCombat.position.x+= speed
-	$Camera2D.position.x+=speed
-	generate_obs()
-	if game_over:
-		$GameOver.show()
-		get_tree().paused = true
-	#if $Camera2D.position.x - $ground.position.x > screen_size.x *1.5: 
-		#$ground.position.x += screen_size.x
-	for obs in obstacles:
-		if obs.position.x < ($Camera2D.position.x - 800):
-			remove_obs(obs)
+	if game_running:
+		speed = START_SPEED
+		$booCombat.position.x+= speed
+		$Camera2D.position.x+=speed
+		generate_obs()
+		if game_over:
+			$GameOver.show()
+			get_tree().paused = true
+		#if $Camera2D.position.x - $ground.position.x > screen_size.x *1.5: 
+			#$ground.position.x += screen_size.x
+		for obs in obstacles:
+			if obs.position.x < ($Camera2D.position.x - 800):
+				remove_obs(obs)
+	else:
+		if Input.is_action_pressed("ui_accept"):
+			game_running = true
 
 func _on_timer_timeout():
 	game_over = true
