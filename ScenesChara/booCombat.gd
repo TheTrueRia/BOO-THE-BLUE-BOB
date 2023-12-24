@@ -8,7 +8,7 @@ var game_over = false
 
 var damage_mode = false
 var health = 10
-var damage_per_second = 4
+var damage_per_second = 5
 
 var coins = 0
 

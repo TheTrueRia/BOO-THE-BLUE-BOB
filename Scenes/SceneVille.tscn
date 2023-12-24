@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://v2esturq1v57"]
+[gd_scene load_steps=35 format=3 uid="uid://v2esturq1v57"]
 
 [ext_resource type="Texture2D" uid="uid://cygoiktn8rvck" path="res://tileset/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_er0uc"]
 [ext_resource type="PackedScene" uid="uid://i1fw5floe1a1" path="res://ScenesChara/BooJump.tscn" id="1_f24op"]
@@ -23,7 +23,6 @@
 [ext_resource type="PackedScene" uid="uid://dg7nobpqcos0v" path="res://Scenes/gem.tscn" id="21_r41cf"]
 [ext_resource type="PackedScene" uid="uid://c77gi7qe83y0v" path="res://Scenes/ThieftArea.tscn" id="23_28y36"]
 [ext_resource type="PackedScene" uid="uid://clemimgmj4hbp" path="res://Scenes/DoorArea.tscn" id="23_sbkh5"]
-[ext_resource type="Script" path="res://UI/pause_menu.gd" id="24_8el6k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tq0jd"]
 texture = ExtResource("1_er0uc")
@@ -48928,62 +48927,6 @@ script = ExtResource("21_7n8xd")
 
 [node name="DoorArea" parent="." instance=ExtResource("23_sbkh5")]
 position = Vector2(896, 171)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("24_8el6k")
-
-[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -72.0
-offset_top = -107.0
-offset_right = 69.0
-offset_bottom = 114.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Control/Panel/VBoxContainer"]
-layout_mode = 2
-text = "=Pause=
-"
-horizontal_alignment = 1
-
-[node name="SaveButton" type="Button" parent="CanvasLayer/Control/Panel/VBoxContainer"]
-layout_mode = 2
-text = "Save"
-
-[node name="LoadButton" type="Button" parent="CanvasLayer/Control/Panel/VBoxContainer"]
-layout_mode = 2
-text = "Load"
-
-[node name="ResumeButton" type="Button" parent="CanvasLayer/Control/Panel/VBoxContainer"]
-layout_mode = 2
-text = "Resume"
-
-[node name="QuitButton" type="Button" parent="CanvasLayer/Control/Panel/VBoxContainer"]
-layout_mode = 2
-text = "Quit
-"
 
 [connection signal="body_entered" from="sorcierArea" to="sorcierArea" method="_on_body_entered"]
 [connection signal="body_exited" from="sorcierArea" to="sorcierArea" method="_on_body_exited"]
