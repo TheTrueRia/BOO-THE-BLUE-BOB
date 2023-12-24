@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://4wd4rbd1tm4r"]
+[gd_scene load_steps=17 format=3 uid="uid://4wd4rbd1tm4r"]
 
 [ext_resource type="Script" path="res://SideScroller/Map.gd" id="1_8ycy3"]
 [ext_resource type="PackedScene" uid="uid://c5nlmucgl6fl5" path="res://ScenesChara/booCombat.tscn" id="2_1vxpt"]
@@ -11,6 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://lyk8u468jp0" path="res://SideScroller/Images/coins.tscn" id="9_4m2lw"]
 [ext_resource type="Script" path="res://SideScroller/Images/coins.gd" id="10_kb2a1"]
 [ext_resource type="Script" path="res://SideScroller/GameFinished.gd" id="11_frdrt"]
+[ext_resource type="Script" path="res://SideScroller/Label.gd" id="12_4c71o"]
+[ext_resource type="Script" path="res://SideScroller/Label2.gd" id="13_srji5"]
+[ext_resource type="Script" path="res://SideScroller/RULESSSSBETCH.gd" id="14_lc5to"]
+[ext_resource type="PackedScene" uid="uid://dtv6op4vn4et" path="res://Scenes/GameOver.tscn" id="15_8j5lh"]
+[ext_resource type="AudioStream" uid="uid://bg2uv6sjs6uck" path="res://medieval-75892.mp3" id="16_c5bn6"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_8ycy3")
@@ -209,6 +214,11 @@ position = Vector2(4236, 415)
 rotation = 3.14159
 scale = Vector2(0.7, 0.7)
 
+[node name="trap11" parent="trap" instance=ExtResource("8_xfvob")]
+position = Vector2(5101, 572)
+rotation = 3.14159
+scale = Vector2(0.7, 0.7)
+
 [node name="coins" type="Node" parent="."]
 
 [node name="coins" parent="coins" instance=ExtResource("9_4m2lw")]
@@ -239,6 +249,18 @@ script = ExtResource("10_kb2a1")
 position = Vector2(8951, 416)
 script = ExtResource("10_kb2a1")
 
+[node name="coins8" parent="coins" instance=ExtResource("9_4m2lw")]
+position = Vector2(1177, 343)
+script = ExtResource("10_kb2a1")
+
+[node name="coins9" parent="coins" instance=ExtResource("9_4m2lw")]
+position = Vector2(2554, 449)
+script = ExtResource("10_kb2a1")
+
+[node name="coins10" parent="coins" instance=ExtResource("9_4m2lw")]
+position = Vector2(3675, 497)
+script = ExtResource("10_kb2a1")
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 17.183
 autostart = true
@@ -264,6 +286,49 @@ text = "YOU  FINISHED
 THE DUNGEON !"
 script = ExtResource("11_frdrt")
 
+[node name="Label" type="Label" parent="."]
+offset_left = 31.0
+offset_top = 38.0
+offset_right = 162.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("5_p2iym")
+theme_override_font_sizes/font_size = 16
+text = "Coins collected :"
+script = ExtResource("12_4c71o")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 16.0
+offset_right = 155.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("5_p2iym")
+theme_override_font_sizes/font_size = 16
+text = "HP :
+"
+script = ExtResource("13_srji5")
+
+[node name="RULESSSSBETCH" type="Label" parent="."]
+offset_left = 312.0
+offset_top = 17.0
+offset_right = 913.0
+offset_bottom = 147.0
+text = "Dungeon rules:
+- Collect 8 leaves in under 30 seconds to defeat the Red Blob
+- Don't touch the red blobs, or you'll die!
+- Beware, the spikes are poisonous: if you touch too many, you'll lose HP.
+If your HP are 0, you're back to square one!
+Press space to start"
+horizontal_alignment = 1
+script = ExtResource("14_lc5to")
+
+[node name="GameOver2" parent="." instance=ExtResource("15_8j5lh")]
+process_mode = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_c5bn6")
+autoplay = true
+max_distance = 2e+06
+
 [connection signal="body_entered" from="trap/trap" to="booCombat" method="_on_trap_body_entered"]
 [connection signal="body_exited" from="trap/trap" to="booCombat" method="_on_trap_body_exited"]
 [connection signal="body_entered" from="trap/trap2" to="booCombat" method="_on_trap_body_entered"]
@@ -284,6 +349,8 @@ script = ExtResource("11_frdrt")
 [connection signal="body_exited" from="trap/trap9" to="booCombat" method="_on_trap_body_exited"]
 [connection signal="body_entered" from="trap/trap10" to="booCombat" method="_on_trap_body_entered"]
 [connection signal="body_exited" from="trap/trap10" to="booCombat" method="_on_trap_body_exited"]
+[connection signal="body_entered" from="trap/trap11" to="booCombat" method="_on_trap_body_entered"]
+[connection signal="body_exited" from="trap/trap11" to="booCombat" method="_on_trap_body_exited"]
 [connection signal="body_entered" from="coins/coins" to="booCombat" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="coins/coins" to="coins/coins" method="_on_body_entered"]
 [connection signal="body_entered" from="coins/coins2" to="booCombat" method="_on_coin_body_entered"]
@@ -298,5 +365,11 @@ script = ExtResource("11_frdrt")
 [connection signal="body_entered" from="coins/coins6" to="coins/coins6" method="_on_body_entered"]
 [connection signal="body_entered" from="coins/coins7" to="booCombat" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="coins/coins7" to="coins/coins7" method="_on_body_entered"]
+[connection signal="body_entered" from="coins/coins8" to="booCombat" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="coins/coins8" to="coins/coins8" method="_on_body_entered"]
+[connection signal="body_entered" from="coins/coins9" to="booCombat" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="coins/coins9" to="coins/coins9" method="_on_body_entered"]
+[connection signal="body_entered" from="coins/coins10" to="booCombat" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="coins/coins10" to="coins/coins10" method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="booCombat" method="_on_timer_timeout"]
