@@ -1,0 +1,93 @@
+[gd_scene load_steps=11 format=3 uid="uid://q2h7e5pvybrn"]
+
+[ext_resource type="Texture2D" uid="uid://clyvgqpekhdb5" path="res://sprites/RedBlob/redBlobLeft.png" id="1_ytfgt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oygwo"]
+atlas = ExtResource("1_ytfgt")
+region = Rect2(0, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7451"]
+atlas = ExtResource("1_ytfgt")
+region = Rect2(32, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d4g5"]
+atlas = ExtResource("1_ytfgt")
+region = Rect2(64, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_054fj"]
+atlas = ExtResource("1_ytfgt")
+region = Rect2(96, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rl0x"]
+atlas = ExtResource("1_ytfgt")
+region = Rect2(128, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvswn"]
+atlas = ExtResource("1_ytfgt")
+region = Rect2(160, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wybu3"]
+atlas = ExtResource("1_ytfgt")
+region = Rect2(192, 16, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mk1vx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oygwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7451")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3d4g5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_054fj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rl0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvswn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}],
+"loop": true,
+"name": &"redBlobLeft",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6a315"]
+radius = 7.0
+
+[node name="redBlob" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mk1vx")
+animation = &"redBlobLeft"
+autoplay = "redBlobLeft"
+frame_progress = 0.784337
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_6a315")

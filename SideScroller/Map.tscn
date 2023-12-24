@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://4wd4rbd1tm4r"]
+[gd_scene load_steps=17 format=3 uid="uid://4wd4rbd1tm4r"]
 
 [ext_resource type="Script" path="res://SideScroller/Map.gd" id="1_8ycy3"]
 [ext_resource type="PackedScene" uid="uid://c5nlmucgl6fl5" path="res://ScenesChara/booCombat.tscn" id="2_1vxpt"]
@@ -14,7 +14,8 @@
 [ext_resource type="Script" path="res://SideScroller/Label.gd" id="12_4c71o"]
 [ext_resource type="Script" path="res://SideScroller/Label2.gd" id="13_srji5"]
 [ext_resource type="Script" path="res://SideScroller/RULESSSSBETCH.gd" id="14_lc5to"]
-[ext_resource type="PackedScene" uid="uid://dtv6op4vn4et" path="res://Scenes/GameOver.tscn" id="15_8j5lh"]
+[ext_resource type="PackedScene" path="res://Scenes/GameOver.tscn" id="15_8j5lh"]
+[ext_resource type="PackedScene" uid="uid://q2h7e5pvybrn" path="res://SideScroller/Images/redBlob.tscn" id="16_piq8o"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_8ycy3")
@@ -321,6 +322,8 @@ script = ExtResource("14_lc5to")
 
 [node name="GameOver2" parent="." instance=ExtResource("15_8j5lh")]
 process_mode = 2
+
+[node name="redBlob" parent="." instance=ExtResource("16_piq8o")]
 
 [connection signal="body_entered" from="trap/trap" to="booCombat" method="_on_trap_body_entered"]
 [connection signal="body_exited" from="trap/trap" to="booCombat" method="_on_trap_body_exited"]
