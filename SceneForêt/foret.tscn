@@ -65,10 +65,10 @@ position = Vector2(8.75049, -24.0354)
 zoom = Vector2(2, 2)
 
 [node name="Control" parent="BooJump/Camera2D" instance=ExtResource("4_cxhoy")]
-offset_left = -272.523
-offset_top = -144.919
-offset_right = -272.523
-offset_bottom = -144.919
+offset_left = -202.751
+offset_top = -157.965
+offset_right = -202.751
+offset_bottom = -157.965
 
 [node name="GuerrierArea" parent="." instance=ExtResource("5_m40m6")]
 position = Vector2(173, -599)

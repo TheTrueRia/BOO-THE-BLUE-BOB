@@ -12,5 +12,5 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	if body.name =="BooJump" and collectible.gem == 3:
+	if body.name =="BooJump" and collectible.gem >= 3:
 		get_tree().change_scene_to_file("res://SideScroller/Map.tscn")
