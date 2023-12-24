@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://g2rd6hgiy3u3"]
+
+[ext_resource type="Texture2D" uid="uid://c2uq2oervqawq" path="res://sprites/RedBlob/redBlobLeft2.png" id="1_veapg"]
+
+[node name="redBlob" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_veapg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-16, -19, -27, 15, -12, 23, 11, 26, 25, 16, 23, -8, 11, -21)
