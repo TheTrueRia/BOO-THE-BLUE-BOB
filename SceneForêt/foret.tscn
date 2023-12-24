@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://34ue1wwr6wsp"]
+[gd_scene load_steps=10 format=3 uid="uid://34ue1wwr6wsp"]
 
 [ext_resource type="PackedScene" uid="uid://by47c1cstu2p0" path="res://tileset/tile_map.tscn" id="1_xm2ad"]
 [ext_resource type="PackedScene" uid="uid://duwhs3hmxcr5h" path="res://ScenesChara/Guerrier.tscn" id="2_qxja8"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://ScenesChara/BooJumpForet.gd" id="4_hrxm1"]
 [ext_resource type="PackedScene" uid="uid://c3155o1vped1g" path="res://SceneForêt/guerrier_area.tscn" id="5_m40m6"]
 [ext_resource type="Script" path="res://SceneForêt/guerrier_area.gd" id="6_2gtc1"]
+[ext_resource type="PackedScene" uid="uid://b6vck3x4y4s6h" path="res://Scenes/Aire2D.tscn" id="8_kviat"]
+[ext_resource type="Script" path="res://SceneForêt/AllerVille.gd" id="9_es72d"]
 
 [node name="Foret" type="Node2D"]
 
@@ -72,5 +74,10 @@ offset_bottom = -144.919
 position = Vector2(173, -599)
 script = ExtResource("6_2gtc1")
 
+[node name="AllerVille" parent="." instance=ExtResource("8_kviat")]
+position = Vector2(2205, -59)
+script = ExtResource("9_es72d")
+
 [connection signal="body_entered" from="GuerrierArea" to="GuerrierArea" method="_on_body_entered"]
 [connection signal="body_exited" from="GuerrierArea" to="GuerrierArea" method="_on_body_exited"]
+[connection signal="body_entered" from="AllerVille" to="AllerVille" method="_on_body_entered"]
