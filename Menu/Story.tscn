@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmu5c2f6f6qjw"]
+
+[ext_resource type="Script" path="res://Story.gd" id="1_cyqne"]
+[ext_resource type="Texture2D" uid="uid://bo5577m1pnyb6" path="res://sprites/Story1.jpeg" id="2_8bgy8"]
+[ext_resource type="Texture2D" uid="uid://cuwis22xt5r8e" path="res://sprites/Story2.jpeg" id="3_ip2ig"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_cyqne")
+
+[node name="Story1" type="Sprite2D" parent="."]
+position = Vector2(574.5, 326.25)
+scale = Vector2(1.42519, 1.44655)
+texture = ExtResource("2_8bgy8")
+
+[node name="Story2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(575, 326)
+scale = Vector2(1.08129, 1.08784)
+texture = ExtResource("3_ip2ig")
