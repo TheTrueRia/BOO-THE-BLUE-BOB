@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cchp837xfq4ko"]
+
+[ext_resource type="Texture2D" uid="uid://bhearyboott62" path="res://sprites/potion.png" id="1_5dq1p"]
+
+[node name="ItemPotion" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 56.0
+offset_bottom = 55.0
+texture = ExtResource("1_5dq1p")
+expand_mode = 5
+stretch_mode = 5

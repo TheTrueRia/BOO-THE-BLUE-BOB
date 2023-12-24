@@ -14,9 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://cxdwj1x7x13vk" path="res://tileset/Trucs cools.png" id="7_veat2"]
 [ext_resource type="PackedScene" uid="uid://vatoxglsospp" path="res://ScenesChara/Sorcier.tscn" id="13_a75nr"]
 [ext_resource type="PackedScene" uid="uid://g5cdoayx2yfi" path="res://ScenesChara/Cow.tscn" id="14_c7l5h"]
+[ext_resource type="PackedScene" uid="uid://chue5y3jenv1n" path="res://Menu/Inventory.tscn" id="14_sg1qv"]
 [ext_resource type="PackedScene" uid="uid://c53tq7jvu3fak" path="res://ScenesChara/chicken.tscn" id="15_pxqf4"]
 [ext_resource type="PackedScene" uid="uid://b2ml0bwqvxh5d" path="res://ScenesChara/Voleur.tscn" id="16_6w103"]
-[ext_resource type="PackedScene" uid="uid://bxd5usnl0vtgg" path="res://ScenesChara/door.tscn" id="17_3mn86"]
 [ext_resource type="Script" path="res://Script/gem.gd" id="19_5w2jk"]
 [ext_resource type="PackedScene" uid="uid://dtgj1oro2xq43" path="res://Scenes/sorcierArea.tscn" id="20_thj6n"]
 [ext_resource type="Script" path="res://Script/ThieftArea.gd" id="21_7n8xd"]
@@ -48865,11 +48865,6 @@ layer_10/y_sort_origin = 0
 layer_10/z_index = 2
 layer_10/tile_data = PackedInt32Array(852014, 1048583, 92, 1310734, 2, 233, 1376270, 2, 234, 1441806, 2, 235, 1507342, 2, 236, 1245199, 65538, 232, 1310735, 65538, 233, 1376271, 65538, 234, 1441807, 65538, 235, 1507343, 65538, 236, 1572879, 65538, 237, 1245200, 131074, 232, 1310736, 131074, 233, 1376272, 131074, 234, 1441808, 131074, 235, 1507344, 131074, 236, 1572880, 131074, 237, 1245201, 196610, 232, 1310737, 196610, 233, 1376273, 196610, 234, 1441809, 196610, 235, 1507345, 196610, 236, 1572881, 196610, 237, 1245202, 262146, 232, 1310738, 262146, 233, 1376274, 262146, 234, 1441810, 262146, 235, 1507346, 262146, 236, 1572882, 262146, 237, 1245203, 327682, 232, 1310739, 327682, 233, 1376275, 327682, 234, 1441811, 327682, 235, 1507347, 327682, 236, 1572883, 327682, 237, 2293794, 7, 94, 2359330, 7, 95, 2293798, 262151, 94, 2359334, 262151, 95, 2293799, 327687, 94, 2359335, 327687, 95, 2228267, 589831, 94, 2293803, 589831, 95, 2359339, 589831, 96, 2424875, 589831, 97, 2228268, 655367, 94, 2293804, 655367, 95, 2359340, 655367, 96, 2424876, 655367, 97, 2228269, 1703943, 94, 2293805, 1703943, 95, 2359341, 1703943, 96, 2424877, 1703943, 97, 2293795, 65543, 94, 2359331, 65543, 95, 2293796, 131079, 94, 2359332, 131079, 95, 2293797, 196615, 94, 2359333, 196615, 95, 2228270, 1769479, 94, 2293806, 1769479, 95, 2359342, 1769479, 96, 2424878, 1769479, 97, 2228271, 1835015, 94, 2293807, 1835015, 95, 2359343, 1835015, 96, 2424879, 1835015, 97, 2228272, 1900551, 94, 2293808, 1900551, 95, 2359344, 1900551, 96, 2424880, 1900551, 97, 2228273, 1966087, 94, 2293809, 1966087, 95, 2359345, 1966087, 96, 2424881, 1966087, 97, 2228274, 2031623, 94, 2293810, 2031623, 95, 2359346, 2031623, 96, 2424882, 2031623, 97)
 
-[node name="door" parent="." instance=ExtResource("17_3mn86")]
-z_index = 0
-position = Vector2(917, 183)
-scale = Vector2(0.9, 0.9)
-
 [node name="Sorcier" parent="." instance=ExtResource("13_a75nr")]
 z_index = 1
 position = Vector2(881, 214)
@@ -48885,6 +48880,12 @@ position = Vector2(426, 433)
 
 [node name="Camera2D" type="Camera2D" parent="BooJump"]
 zoom = Vector2(2, 2)
+
+[node name="Control" parent="BooJump/Camera2D" instance=ExtResource("14_sg1qv")]
+offset_left = -213.0
+offset_top = -167.0
+offset_right = -213.0
+offset_bottom = -167.0
 
 [node name="Cow" parent="." instance=ExtResource("14_c7l5h")]
 z_index = 1
@@ -48913,9 +48914,16 @@ position = Vector2(356, 477)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("19_5w2jk")
 
+[node name="gem2" parent="gem" instance=ExtResource("21_r41cf")]
+visible = false
+z_index = 2
+position = Vector2(1061, 275)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("19_5w2jk")
+
 [node name="ThieftArea" parent="." instance=ExtResource("23_28y36")]
 z_index = 2
-position = Vector2(272, 443)
+position = Vector2(263, 460)
 script = ExtResource("21_7n8xd")
 
 [node name="DoorArea" parent="." instance=ExtResource("23_sbkh5")]
@@ -48981,6 +48989,8 @@ text = "Quit
 [connection signal="body_exited" from="sorcierArea" to="sorcierArea" method="_on_body_exited"]
 [connection signal="body_entered" from="gem/gem" to="BooJump" method="_on_gem_body_entered"]
 [connection signal="body_entered" from="gem/gem" to="gem/gem" method="_on_body_entered"]
+[connection signal="body_entered" from="gem/gem2" to="BooJump" method="_on_gem_body_entered"]
+[connection signal="body_entered" from="gem/gem2" to="gem/gem2" method="_on_body_entered"]
 [connection signal="body_entered" from="ThieftArea" to="ThieftArea" method="_on_body_entered"]
 [connection signal="body_exited" from="ThieftArea" to="ThieftArea" method="_on_body_exited"]
 [connection signal="body_entered" from="DoorArea" to="DoorArea" method="_on_body_entered"]

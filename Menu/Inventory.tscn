@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://chue5y3jenv1n"]
+
+[ext_resource type="Texture2D" uid="uid://dotx6wfohhtcp" path="res://sprites/Gems/BlueGem.png" id="1_unr25"]
+[ext_resource type="Script" path="res://Collectible/gem2.gd" id="2_3hela"]
+[ext_resource type="Texture2D" uid="uid://cw4d1kd5hxq10" path="res://sprites/Gems/GreenGem.png" id="2_bc5fn"]
+[ext_resource type="Script" path="res://Collectible/gem3.gd" id="3_opxdb"]
+[ext_resource type="Texture2D" uid="uid://b1lyrqa7gs122" path="res://sprites/Gems/RedGem.png" id="3_ygtix"]
+[ext_resource type="Texture2D" uid="uid://bhearyboott62" path="res://sprites/potion.png" id="4_rv6d6"]
+[ext_resource type="Script" path="res://Collectible/gem1.gd" id="5_whnja"]
+[ext_resource type="Script" path="res://Collectible/potion.gd" id="7_4gsjt"]
+
+[node name="Control" type="Control"]
+z_index = 10
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -87.0
+offset_right = 83.0
+offset_bottom = 90.0
+grow_horizontal = 0
+scale = Vector2(0.5, 0.5)
+theme_override_constants/h_separation = -30
+columns = 2
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 90)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_constants/v_separation = -25
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(50, 50)
+layout_direction = 3
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 14
+theme_override_constants/h_separation = -20
+columns = 2
+
+[node name="gem2" type="TextureRect" parent="GridContainer/GridContainer/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+texture = ExtResource("1_unr25")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("2_3hela")
+
+[node name="gem3" type="TextureRect" parent="GridContainer/GridContainer/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+texture = ExtResource("2_bc5fn")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("3_opxdb")
+
+[node name="gem1" type="TextureRect" parent="GridContainer/GridContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 50)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+texture = ExtResource("3_ygtix")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_whnja")
+
+[node name="Potion" type="TextureButton" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 90)
+layout_mode = 2
+texture_normal = ExtResource("4_rv6d6")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("7_4gsjt")

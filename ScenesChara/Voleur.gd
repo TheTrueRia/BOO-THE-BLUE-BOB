@@ -21,4 +21,10 @@ func _process(delta):
 				animated_sprite.play("voleurRunLeft")
 		else:
 			animated_sprite.play("voleurRunRight")
+	else:
+		animated_sprite.play("voleurCapeVole")
 
+
+
+func _on_door_area_body_entered(body):
+	pass # Replace with function body.

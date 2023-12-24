@@ -1,38 +1,53 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxd5usnl0vtgg"]
+[gd_scene load_steps=8 format=3 uid="uid://bxd5usnl0vtgg"]
 
-[ext_resource type="Texture2D" uid="uid://fm5l1vemw7ox" path="res://tileset/Door1_pipo.png" id="1_8pc03"]
+[ext_resource type="Texture2D" uid="uid://dd3dqf6qp2r00" path="res://tileset/formePorte.png" id="1_mjpc6"]
+[ext_resource type="Texture2D" uid="uid://cu5a5ahjie26x" path="res://tileset/OuverturePorte.png" id="2_2a207"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_buodv"]
-atlas = ExtResource("1_8pc03")
-region = Rect2(0, 192, 32, 96)
+[sub_resource type="AtlasTexture" id="AtlasTexture_em32q"]
+atlas = ExtResource("2_2a207")
+region = Rect2(0, 0, 32, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xwbvs"]
-atlas = ExtResource("1_8pc03")
-region = Rect2(32, 192, 32, 96)
+[sub_resource type="AtlasTexture" id="AtlasTexture_37wxc"]
+atlas = ExtResource("2_2a207")
+region = Rect2(32, 0, 32, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vt4l"]
+atlas = ExtResource("2_2a207")
+region = Rect2(64, 0, 32, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iohpv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_buodv")
+"texture": SubResource("AtlasTexture_em32q")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xwbvs")
+"texture": SubResource("AtlasTexture_37wxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vt4l")
 }],
-"loop": true,
-"name": &"default",
-"speed": 1.0
+"loop": false,
+"name": &"opening",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wq4v"]
 size = Vector2(31, 55)
 
-[node name="door" type="CharacterBody2D"]
+[node name="door" type="StaticBody2D"]
 z_index = 4
 
+[node name="FormePorte" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+position = Vector2(0, 16)
+texture = ExtResource("1_mjpc6")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 16)
 sprite_frames = SubResource("SpriteFrames_iohpv")
-frame_progress = 0.49801
+animation = &"opening"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 16.5)
