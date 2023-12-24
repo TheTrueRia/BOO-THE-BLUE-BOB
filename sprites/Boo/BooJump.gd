@@ -10,6 +10,7 @@ var array_pos :  Array[Vector2]
 var previous_position : Vector2
 var voleur_taken = false
 
+
 func _ready():
 	array_pos.resize(24)
 	array_pos.fill(global_position)
@@ -48,4 +49,5 @@ func _process(_delta):
 func _on_gem_body_entered(body):
 	collectible.incrementGem()
 	
+
 
