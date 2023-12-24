@@ -7,5 +7,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if collectible.potion == 1 :
+	if collectible.potion > 0 :
 		show()
+	else:
+		hide()

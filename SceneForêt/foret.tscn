@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://34ue1wwr6wsp"]
+[gd_scene load_steps=8 format=3 uid="uid://34ue1wwr6wsp"]
 
 [ext_resource type="PackedScene" uid="uid://by47c1cstu2p0" path="res://tileset/tile_map.tscn" id="1_xm2ad"]
 [ext_resource type="PackedScene" uid="uid://duwhs3hmxcr5h" path="res://ScenesChara/Guerrier.tscn" id="2_qxja8"]
 [ext_resource type="PackedScene" uid="uid://i1fw5floe1a1" path="res://ScenesChara/BooJump.tscn" id="3_c3wp1"]
+[ext_resource type="PackedScene" uid="uid://chue5y3jenv1n" path="res://Menu/Inventory.tscn" id="4_cxhoy"]
+[ext_resource type="Script" path="res://ScenesChara/BooJumpForet.gd" id="4_hrxm1"]
+[ext_resource type="PackedScene" uid="uid://c3155o1vped1g" path="res://SceneForêt/guerrier_area.tscn" id="5_m40m6"]
+[ext_resource type="Script" path="res://SceneForêt/guerrier_area.gd" id="6_2gtc1"]
 
 [node name="Foret" type="Node2D"]
 
@@ -50,9 +54,23 @@ scale = Vector2(0.1, 0.1)
 
 [node name="BooJump" parent="." instance=ExtResource("3_c3wp1")]
 z_index = 1
-position = Vector2(2130, 7)
+position = Vector2(991, -578)
 scale = Vector2(0.799933, 1.12334)
+script = ExtResource("4_hrxm1")
 
 [node name="Camera2D" type="Camera2D" parent="BooJump"]
-position = Vector2(5, -26)
+position = Vector2(-6.25073, -14.2432)
 zoom = Vector2(2, 2)
+
+[node name="Control" parent="BooJump/Camera2D" instance=ExtResource("4_cxhoy")]
+offset_left = -272.523
+offset_top = -144.919
+offset_right = -272.523
+offset_bottom = -144.919
+
+[node name="GuerrierArea" parent="." instance=ExtResource("5_m40m6")]
+position = Vector2(173, -599)
+script = ExtResource("6_2gtc1")
+
+[connection signal="body_entered" from="GuerrierArea" to="GuerrierArea" method="_on_body_entered"]
+[connection signal="body_exited" from="GuerrierArea" to="GuerrierArea" method="_on_body_exited"]

@@ -79,7 +79,6 @@ stretch_mode = 5
 script = ExtResource("5_whnja")
 
 [node name="Potion" type="TextureButton" parent="GridContainer"]
-visible = false
 custom_minimum_size = Vector2(100, 90)
 layout_mode = 2
 texture_normal = ExtResource("4_rv6d6")

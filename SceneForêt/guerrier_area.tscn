@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3155o1vped1g"]
+
+[ext_resource type="Texture2D" uid="uid://hxkvgf25ehde" path="res://tileset/bulle.png" id="1_4cpbr"]
+[ext_resource type="FontFile" uid="uid://chu2xt61e6xck" path="res://arcadeclassic/ARCADECLASSIC.TTF" id="2_8hsxj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fd5c1"]
+size = Vector2(190, 140)
+
+[node name="GuerrierArea" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(85, 60)
+shape = SubResource("RectangleShape2D_fd5c1")
+
+[node name="Bulle" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(62, -24)
+scale = Vector2(0.153866, 0.0745902)
+texture = ExtResource("1_4cpbr")
+
+[node name="dialogue" type="RichTextLabel" parent="."]
+visible = false
+offset_left = -3.0
+offset_top = -32.0
+offset_right = 129.0
+offset_bottom = -19.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_8hsxj")
+theme_override_font_sizes/normal_font_size = 13
+text = "Press  D  to   talk"
+fit_content = true
