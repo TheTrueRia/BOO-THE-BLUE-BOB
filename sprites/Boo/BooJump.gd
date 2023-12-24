@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name BooJump
 
 var speed = 100
-var gem = 3
+var collectible = preload("res://Collectibles.gd")
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var T_area = $"../ThieftArea"
 @onready var door = $"../DoorArea"
@@ -46,6 +46,6 @@ func _process(_delta):
 			voleur_taken = true
 			
 func _on_gem_body_entered(body):
-	gem -= 1
+	collectible.incrementGem()
 	
 

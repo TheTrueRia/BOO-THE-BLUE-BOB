@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://v2esturq1v57"]
+[gd_scene load_steps=34 format=3 uid="uid://v2esturq1v57"]
 
 [ext_resource type="Texture2D" uid="uid://cygoiktn8rvck" path="res://tileset/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_er0uc"]
 [ext_resource type="PackedScene" uid="uid://i1fw5floe1a1" path="res://ScenesChara/BooJump.tscn" id="1_f24op"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cxdwj1x7x13vk" path="res://tileset/Trucs cools.png" id="7_veat2"]
 [ext_resource type="PackedScene" uid="uid://vatoxglsospp" path="res://ScenesChara/Sorcier.tscn" id="13_a75nr"]
 [ext_resource type="PackedScene" uid="uid://g5cdoayx2yfi" path="res://ScenesChara/Cow.tscn" id="14_c7l5h"]
+[ext_resource type="PackedScene" uid="uid://chue5y3jenv1n" path="res://Menu/Inventory.tscn" id="14_sg1qv"]
 [ext_resource type="PackedScene" uid="uid://c53tq7jvu3fak" path="res://ScenesChara/chicken.tscn" id="15_pxqf4"]
 [ext_resource type="PackedScene" uid="uid://b2ml0bwqvxh5d" path="res://ScenesChara/Voleur.tscn" id="16_6w103"]
 [ext_resource type="Script" path="res://Script/gem.gd" id="19_5w2jk"]
@@ -48876,6 +48877,12 @@ position = Vector2(426, 433)
 
 [node name="Camera2D" type="Camera2D" parent="BooJump"]
 zoom = Vector2(2, 2)
+
+[node name="Control" parent="BooJump/Camera2D" instance=ExtResource("14_sg1qv")]
+offset_left = -213.0
+offset_top = -167.0
+offset_right = -213.0
+offset_bottom = -167.0
 
 [node name="Cow" parent="." instance=ExtResource("14_c7l5h")]
 z_index = 1

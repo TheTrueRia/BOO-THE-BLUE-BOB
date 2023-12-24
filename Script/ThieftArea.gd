@@ -14,14 +14,20 @@ var nbr_of_dialog=2
 var All_pos: Array[Vector2]
 
 const thieft_lines: Array[String]=[
-	"Pourquoi devrais-je t'aider ?",
-	"La vie n'a aucun sens de toute facon.",
-	"Peut-etre que cette porte menera a ma fin, qui sait ?"
+	"THIEFT: Why should I help you? ",
+	"THIEFT: Life is meaningless anyway. ",
+	"THIEFT: Maybe this door will lead to my end, who knows?"
 ]
 const Boo_lines: Array[String]=[
-	"He, toi la-bas, le voleur.",
-	"J'ai besoin d'aide pour ouvrir cette porte",
-	"Peux-tu la deverrouiller pour moi ?"
+	"BOO: Hey, you there, the thief. ",
+	"BOO: I need help opening this door. ",
+	"BOO: Can you unlock it for me?"
+]
+const Boo_lines2: Array[String]=[
+	"BOO: Do not speak like that.",
+	"BOO: There is always hope, even in dark times. ",
+	"BOO: Help me open this door, ",
+	"BOO: and perhaps you'll find a new purpose in life."
 ]
 var lines : Array
 
@@ -31,6 +37,7 @@ func _ready():
 	label = $dialogue
 	image = $Sprite2D
 	boo = $"../BooJump"
+	#lines.append(Boo_lines2)
 	lines.append(thieft_lines)
 	lines.append(Boo_lines)
 	All_pos.append(global_position)
