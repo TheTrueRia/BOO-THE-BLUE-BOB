@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://38hf2lpxq8q6"]
+
+[ext_resource type="AudioStream" uid="uid://8qbpk1yhy1q4" path="res://medieval_village_atmosphere-79282.mp3" id="1_nnhah"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_nnhah")
+autoplay = true
