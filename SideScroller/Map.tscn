@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://4wd4rbd1tm4r"]
+[gd_scene load_steps=11 format=3 uid="uid://4wd4rbd1tm4r"]
 
 [ext_resource type="Script" path="res://SideScroller/Map.gd" id="1_8ycy3"]
 [ext_resource type="PackedScene" uid="uid://c5nlmucgl6fl5" path="res://ScenesChara/booCombat.tscn" id="2_1vxpt"]
 [ext_resource type="PackedScene" uid="uid://dbtjty88ctwq4" path="res://SideScroller/ground.tscn" id="2_a4mri"]
 [ext_resource type="PackedScene" uid="uid://t3rgpti77v3w" path="res://SideScroller/parallax_background.tscn" id="3_hcmcb"]
+[ext_resource type="FontFile" uid="uid://chu2xt61e6xck" path="res://arcadeclassic/ARCADECLASSIC.TTF" id="5_p2iym"]
+[ext_resource type="Script" path="res://SideScroller/GameOver.gd" id="6_bhm2n"]
+[ext_resource type="PackedScene" uid="uid://dr801afewaekn" path="res://SideScroller/Images/platform.tscn" id="7_tnmi2"]
+[ext_resource type="PackedScene" uid="uid://bmveyrse55rlo" path="res://SideScroller/Images/trap.tscn" id="8_xfvob"]
+[ext_resource type="PackedScene" uid="uid://lyk8u468jp0" path="res://SideScroller/Images/coins.tscn" id="9_4m2lw"]
+[ext_resource type="Script" path="res://SideScroller/Images/coins.gd" id="10_kb2a1"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_8ycy3")
@@ -12,10 +18,285 @@ script = ExtResource("1_8ycy3")
 position = Vector2(72, 511)
 scale = Vector2(2, 2)
 
-[node name="ground" parent="." instance=ExtResource("2_a4mri")]
-position = Vector2(1, 0)
-
 [node name="ParallaxBackground" parent="." instance=ExtResource("3_hcmcb")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(588, 320)
+
+[node name="Ground" type="Node" parent="."]
+
+[node name="ground" parent="Ground" instance=ExtResource("2_a4mri")]
+position = Vector2(1, 0)
+
+[node name="ground2" parent="Ground" instance=ExtResource("2_a4mri")]
+position = Vector2(2308, 0)
+
+[node name="ground3" parent="Ground" instance=ExtResource("2_a4mri")]
+position = Vector2(4616, 0)
+
+[node name="ground4" parent="Ground" instance=ExtResource("2_a4mri")]
+position = Vector2(6905, 1)
+
+[node name="ground5" parent="Ground" instance=ExtResource("2_a4mri")]
+position = Vector2(9191, 1)
+
+[node name="platform" type="Node" parent="."]
+
+[node name="platform" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(341, 507)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform2" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(698, 450)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform3" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(1067, 382)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform4" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(1393, 494)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform5" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(2186, 516)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform6" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(2541, 542)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform7" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(2919, 465)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform8" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(3261, 385)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform9" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(3605, 296)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform10" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(4131, 399)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform11" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(5458, 539)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform12" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(5864, 505)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform13" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(6085, 506)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform14" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(6424, 449)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform15" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(6811, 451)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform16" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(7030, 351)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform17" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(7387, 351)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform18" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(7397, 515)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform19" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(7841, 458)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform20" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(8221, 511)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform21" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(8748, 515)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform22" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(8744, 374)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform23" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(8956, 374)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform24" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(8956, 515)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform25" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(9168, 515)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform26" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(9163, 374)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform27" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(9377, 515)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform28" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(9372, 374)
+scale = Vector2(0.2, 0.2)
+
+[node name="platform29" parent="platform" instance=ExtResource("7_tnmi2")]
+position = Vector2(9593, 516)
+scale = Vector2(0.2, 0.2)
+
+[node name="trap" type="Node" parent="."]
+
+[node name="trap" parent="trap" instance=ExtResource("8_xfvob")]
+position = Vector2(822, 574)
+rotation = 3.14159
+scale = Vector2(0.7, 0.7)
+
+[node name="trap2" parent="trap" instance=ExtResource("8_xfvob")]
+position = Vector2(971, 573)
+rotation = 3.14159
+scale = Vector2(0.7, 0.7)
+
+[node name="trap3" parent="trap" instance=ExtResource("8_xfvob")]
+position = Vector2(1120, 573)
+rotation = 3.14159
+scale = Vector2(0.7, 0.7)
+
+[node name="trap4" parent="trap" instance=ExtResource("8_xfvob")]
+position = Vector2(1267, 573)
+rotation = 3.14159
+scale = Vector2(0.7, 0.7)
+
+[node name="trap5" parent="trap" instance=ExtResource("8_xfvob")]
+position = Vector2(2648, 573)
+rotation = 3.14159
+scale = Vector2(0.7, 0.7)
+
+[node name="trap6" parent="trap" instance=ExtResource("8_xfvob")]
+position = Vector2(2958, 393)
+rotation = 1.5708
+scale = Vector2(0.6, 0.6)
+
+[node name="trap7" parent="trap" instance=ExtResource("8_xfvob")]
+position = Vector2(3399, 477)
+rotation = 3.14159
+scale = Vector2(0.7, 0.7)
+
+[node name="trap8" parent="trap" instance=ExtResource("8_xfvob")]
+position = Vector2(3800, 160)
+scale = Vector2(0.7, 0.7)
+
+[node name="trap9" parent="trap" instance=ExtResource("8_xfvob")]
+position = Vector2(3944, 160)
+scale = Vector2(0.7, 0.7)
+
+[node name="trap10" parent="trap" instance=ExtResource("8_xfvob")]
+position = Vector2(4236, 415)
+rotation = 3.14159
+scale = Vector2(0.7, 0.7)
+
+[node name="coins" type="Node" parent="."]
+
+[node name="coins" parent="coins" instance=ExtResource("9_4m2lw")]
+position = Vector2(1093, 293)
+script = ExtResource("10_kb2a1")
+
+[node name="coins2" parent="coins" instance=ExtResource("9_4m2lw")]
+position = Vector2(3421, 234)
+script = ExtResource("10_kb2a1")
+
+[node name="coins3" parent="coins" instance=ExtResource("9_4m2lw")]
+position = Vector2(4547, 504)
+script = ExtResource("10_kb2a1")
+
+[node name="coins4" parent="coins" instance=ExtResource("9_4m2lw")]
+position = Vector2(6634, 324)
+script = ExtResource("10_kb2a1")
+
+[node name="coins5" parent="coins" instance=ExtResource("9_4m2lw")]
+position = Vector2(7404, 256)
+script = ExtResource("10_kb2a1")
+
+[node name="coins6" parent="coins" instance=ExtResource("9_4m2lw")]
+position = Vector2(7415, 424)
+script = ExtResource("10_kb2a1")
+
+[node name="coins7" parent="coins" instance=ExtResource("9_4m2lw")]
+position = Vector2(8951, 416)
+script = ExtResource("10_kb2a1")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="GameOver" type="Label" parent="."]
+visible = false
+offset_left = 352.0
+offset_top = 246.0
+offset_right = 846.0
+offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("5_p2iym")
+theme_override_font_sizes/font_size = 100
+text = "YOU  LOST !"
+script = ExtResource("6_bhm2n")
+
+[node name="GameFinished" type="Label" parent="."]
+visible = false
+offset_left = 274.0
+offset_top = 209.0
+offset_right = 920.0
+offset_bottom = 419.0
+theme_override_fonts/font = ExtResource("5_p2iym")
+theme_override_font_sizes/font_size = 100
+text = "YOU  FINISHED
+THE DUNGEON !"
+script = ExtResource("6_bhm2n")
+
+[connection signal="body_entered" from="trap/trap" to="booCombat" method="_on_trap_body_entered"]
+[connection signal="body_exited" from="trap/trap" to="booCombat" method="_on_trap_body_exited"]
+[connection signal="body_entered" from="trap/trap2" to="booCombat" method="_on_trap_body_entered"]
+[connection signal="body_exited" from="trap/trap2" to="booCombat" method="_on_trap_body_exited"]
+[connection signal="body_entered" from="trap/trap3" to="booCombat" method="_on_trap_body_entered"]
+[connection signal="body_exited" from="trap/trap3" to="booCombat" method="_on_trap_body_exited"]
+[connection signal="body_entered" from="trap/trap4" to="booCombat" method="_on_trap_body_entered"]
+[connection signal="body_exited" from="trap/trap4" to="booCombat" method="_on_trap_body_exited"]
+[connection signal="body_entered" from="trap/trap5" to="booCombat" method="_on_trap_body_entered"]
+[connection signal="body_exited" from="trap/trap5" to="booCombat" method="_on_trap_body_exited"]
+[connection signal="body_entered" from="trap/trap6" to="booCombat" method="_on_trap_body_entered"]
+[connection signal="body_exited" from="trap/trap6" to="booCombat" method="_on_trap_body_exited"]
+[connection signal="body_entered" from="trap/trap7" to="booCombat" method="_on_trap_body_entered"]
+[connection signal="body_exited" from="trap/trap7" to="booCombat" method="_on_trap_body_exited"]
+[connection signal="body_entered" from="trap/trap8" to="booCombat" method="_on_trap_body_entered"]
+[connection signal="body_exited" from="trap/trap8" to="booCombat" method="_on_trap_body_exited"]
+[connection signal="body_entered" from="trap/trap9" to="booCombat" method="_on_trap_body_entered"]
+[connection signal="body_exited" from="trap/trap9" to="booCombat" method="_on_trap_body_exited"]
+[connection signal="body_entered" from="trap/trap10" to="booCombat" method="_on_trap_body_entered"]
+[connection signal="body_exited" from="trap/trap10" to="booCombat" method="_on_trap_body_exited"]
+[connection signal="body_entered" from="coins/coins" to="booCombat" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="coins/coins" to="coins/coins" method="_on_body_entered"]
+[connection signal="body_entered" from="coins/coins2" to="booCombat" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="coins/coins2" to="coins/coins2" method="_on_body_entered"]
+[connection signal="body_entered" from="coins/coins3" to="booCombat" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="coins/coins3" to="coins/coins3" method="_on_body_entered"]
+[connection signal="body_entered" from="coins/coins4" to="booCombat" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="coins/coins4" to="coins/coins4" method="_on_body_entered"]
+[connection signal="body_entered" from="coins/coins5" to="booCombat" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="coins/coins5" to="coins/coins5" method="_on_body_entered"]
+[connection signal="body_entered" from="coins/coins6" to="booCombat" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="coins/coins6" to="coins/coins6" method="_on_body_entered"]
+[connection signal="body_entered" from="coins/coins7" to="booCombat" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="coins/coins7" to="coins/coins7" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="booCombat" method="_on_timer_timeout"]

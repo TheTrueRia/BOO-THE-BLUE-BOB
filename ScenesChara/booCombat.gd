@@ -1,9 +1,17 @@
 extends CharacterBody2D
-
+class_name booCombat
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 @onready var animated_sprite = $AnimatedSprite2D
+var game_over = false
+
+var damage_mode = false
+var health = 10
+var damage_per_second = 2
+
+var coins = 8
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -31,3 +39,39 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+	if damage_mode: 
+		health -= damage_per_second*delta 
+		print("Damage taken: ", health)
+		
+		# player dies, pause the game
+		if(health < 0):
+			health = 0
+			print("GAME OVER !")
+
+func _on_timer_timeout():
+	game_over = true
+	
+	
+func _on_coin_body_entered(body):
+	coins += 1
+	print("coins: "+str(coins))
+	
+	# game/level over when all coins are picked
+	if(coins == 8):
+		print("GAME FINISHED") 
+	
+func _on_trap_body_entered(body):
+	# activate damage mode when the player is on the trap area
+	damage_mode = true
+	
+	if body.is_in_group("trap"):
+		health -= 2
+		
+
+func _on_trap_body_exited(body):
+	# no longer in damage mode
+	damage_mode = false
+
+
+

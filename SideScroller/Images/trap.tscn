@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bmveyrse55rlo"]
+
+[node name="trap" type="Area2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.741176, 0.501961, 0.905882, 1)
+polygon = PackedVector2Array(106, -1, 300, -1, 271, 60, 248, 15, 228, 59, 210, 13, 187, 58, 167, 15, 148, 59, 132, 16, 110, 58, 89, -1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(90, 1, 299, -1, 271, 58, 247, 16, 228, 59, 210, 14, 190, 55, 166, 17, 146, 57, 131, 17, 110, 57)
