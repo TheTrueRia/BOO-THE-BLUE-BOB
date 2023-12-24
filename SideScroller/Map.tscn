@@ -15,7 +15,7 @@
 [ext_resource type="Script" path="res://SideScroller/Label2.gd" id="13_srji5"]
 [ext_resource type="Script" path="res://SideScroller/RULESSSSBETCH.gd" id="14_lc5to"]
 [ext_resource type="PackedScene" uid="uid://dtv6op4vn4et" path="res://Scenes/GameOver.tscn" id="15_8j5lh"]
-[ext_resource type="AudioStream" uid="uid://bg2uv6sjs6uck" path="res://medieval-75892.mp3" id="16_c5bn6"]
+[ext_resource type="AudioStream" uid="uid://0ktejupmllxv" path="res://star-wars-style-battle-music-148641.mp3" id="16_hxdv0"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_8ycy3")
@@ -325,7 +325,7 @@ script = ExtResource("14_lc5to")
 process_mode = 2
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("16_c5bn6")
+stream = ExtResource("16_hxdv0")
 autoplay = true
 max_distance = 2e+06
 
