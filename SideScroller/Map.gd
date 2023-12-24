@@ -11,6 +11,7 @@ var redBlob = preload("res://Scenes/redBlob.tscn")
 var game_running = false
 
 func new_game():
+	randomize()
 	get_tree().paused = false
 	game_over = false
 	game_running = false
@@ -57,13 +58,13 @@ func _on_timer_timeout():
 	game_over = true
 
 func generate_obs():
-	if (obstacles.is_empty() or last_obs.position.x < $Camera2D.position.x - randi_range(200, 700)):
+	if (obstacles.is_empty() or last_obs.position.x < $Camera2D.position.x - randi_range(300, 1000)):
 		var obs
 		var max_obs = 3
 		for i in range(randi() % max_obs + 1):
 			obs = redBlob.instantiate()
-			var obs_height = obs.get_node("Sprite2D").texture.get_height()
-			var obs_scale = obs.get_node("Sprite2D").scale
+			#var obs_height = obs.get_node("AnimatedSprite2D").texture.get_height()
+			#var obs_scale = obs.get_node("AnimatedSprite2D").scale
 			var obs_x : int = $Camera2D.position.x+800
 			var obs_y : int = $Camera2D.position.y+220
 			last_obs = obs

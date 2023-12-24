@@ -1,11 +1,93 @@
-[gd_scene load_steps=2 format=3 uid="uid://g2rd6hgiy3u3"]
+[gd_scene load_steps=11 format=3 uid="uid://g2rd6hgiy3u3"]
 
-[ext_resource type="Texture2D" uid="uid://c2uq2oervqawq" path="res://sprites/RedBlob/redBlobLeft2.png" id="1_veapg"]
+[ext_resource type="Texture2D" uid="uid://clyvgqpekhdb5" path="res://sprites/RedBlob/redBlobLeft.png" id="1_yd1jq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oygwo"]
+atlas = ExtResource("1_yd1jq")
+region = Rect2(0, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7451"]
+atlas = ExtResource("1_yd1jq")
+region = Rect2(32, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d4g5"]
+atlas = ExtResource("1_yd1jq")
+region = Rect2(64, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_054fj"]
+atlas = ExtResource("1_yd1jq")
+region = Rect2(96, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rl0x"]
+atlas = ExtResource("1_yd1jq")
+region = Rect2(128, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvswn"]
+atlas = ExtResource("1_yd1jq")
+region = Rect2(160, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wybu3"]
+atlas = ExtResource("1_yd1jq")
+region = Rect2(192, 16, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lhfdo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oygwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7451")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3d4g5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_054fj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rl0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvswn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wybu3")
+}],
+"loop": true,
+"name": &"redBlobLeft",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mu3bb"]
+radius = 44.5533
 
 [node name="redBlob" type="Area2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_veapg")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_lhfdo")
+animation = &"redBlobLeft"
+autoplay = "redBlobLeft"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-16, -19, -27, 15, -12, 23, 11, 26, 25, 16, 23, -8, 11, -21)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_mu3bb")
