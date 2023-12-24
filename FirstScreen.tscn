@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwt2qdkxp0ox6"]
+[gd_scene load_steps=4 format=3 uid="uid://cwt2qdkxp0ox6"]
 
 [ext_resource type="Script" path="res://FirstScreen.gd" id="1_xekso"]
 [ext_resource type="Texture2D" uid="uid://br16na7shcwh4" path="res://firstscreen.jpg" id="1_xflue"]
+[ext_resource type="PackedScene" uid="uid://bikgqiv7wcbs5" path="res://Menu/PressSpaceLabel.tscn" id="3_8owg5"]
 
 [node name="FirstScreen" type="Node2D"]
 script = ExtResource("1_xekso")
@@ -10,3 +11,10 @@ script = ExtResource("1_xekso")
 position = Vector2(577.25, 324)
 scale = Vector2(1.35998, 1.39419)
 texture = ExtResource("1_xflue")
+
+[node name="Label" parent="." instance=ExtResource("3_8owg5")]
+offset_left = 406.0
+offset_top = 529.0
+offset_right = 760.0
+offset_bottom = 593.0
+theme_override_colors/font_color = Color(0.882353, 0.835294, 0.992157, 1)

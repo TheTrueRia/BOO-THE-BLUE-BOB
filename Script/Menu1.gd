@@ -13,8 +13,8 @@ func _on_quit_pressed():
 
 
 func _on_rules_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Menu/commandes.tscn")
 
 
 func _on_credit_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Menu/crédits.tscn")

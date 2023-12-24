@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bikgqiv7wcbs5"]
+
+[ext_resource type="FontFile" uid="uid://chu2xt61e6xck" path="res://arcadeclassic/ARCADECLASSIC.TTF" id="1_ocrc7"]
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.819608, 0.780392, 0.960784, 1)
+theme_override_fonts/font = ExtResource("1_ocrc7")
+theme_override_font_sizes/font_size = 60
+text = "Press   Space"
