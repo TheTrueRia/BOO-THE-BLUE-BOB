@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgqbx8aq0muuy"]
+
+[ext_resource type="Texture2D" uid="uid://dvwv6ab6r7tni" path="res://finalDisplay.jpg" id="1_bkpug"]
+
+[node name="FinalDisplay" type="CanvasLayer"]
+
+[node name="FinalDisplay" type="Sprite2D" parent="."]
+position = Vector2(577, 327)
+scale = Vector2(1.26407, 1.27692)
+texture = ExtResource("1_bkpug")

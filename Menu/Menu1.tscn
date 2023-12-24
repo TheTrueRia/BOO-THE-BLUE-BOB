@@ -39,7 +39,7 @@ text = "Rules
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Credit" to="." method="_on_credit_pressed"]
 [connection signal="pressed" from="Credit" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Credit" to="." method="_on_credit_pressed"]
 [connection signal="pressed" from="Rules" to="." method="_on_rules_pressed"]
 [connection signal="pressed" from="Rules" to="." method="_on_play_pressed"]

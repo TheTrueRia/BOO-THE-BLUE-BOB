@@ -14,4 +14,5 @@ func _process(delta):
 	position.y=camPos.y-200
 	if(get_node("../booCombat").coins) == 3:
 		show()
+		$"../FinalDisplay".show()
 		get_tree().paused = true

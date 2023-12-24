@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d034e0etwdkb6"]
+
+[ext_resource type="Script" path="res://FirstScreen.gd" id="1_xekso"]
+[ext_resource type="Texture2D" uid="uid://br16na7shcwh4" path="res://firstscreen.jpg" id="1_xflue"]
+
+[node name="FirstScreen" type="Node2D"]
+script = ExtResource("1_xekso")
+
+[node name="Firstscreen" type="Sprite2D" parent="."]
+position = Vector2(577.25, 324)
+scale = Vector2(1.35998, 1.39419)
+texture = ExtResource("1_xflue")
