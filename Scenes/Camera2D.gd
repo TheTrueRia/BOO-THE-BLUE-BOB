@@ -1,6 +1,6 @@
 extends Camera2D
 
-var min_x : float = 290  # La coordonnée X minimale de la zone
+var min_x : float = 300  # La coordonnée X minimale de la zone
 var max_x : float = 1150-290  # La coordonnée X maximale de la zone
 var min_y : float = 162  # La coordonnée Y minimale de la zone
 var max_y : float = 650-162  # La coordonnée Y maximale de la zone
