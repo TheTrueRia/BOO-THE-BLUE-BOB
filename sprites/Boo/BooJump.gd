@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name BooJumpF
+class_name BooJump
 
 var speed = 100
 var collectible = preload("res://Collectibles.gd")
