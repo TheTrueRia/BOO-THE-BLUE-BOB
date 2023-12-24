@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://v2esturq1v57"]
+[gd_scene load_steps=36 format=3 uid="uid://v2esturq1v57"]
 
 [ext_resource type="Texture2D" uid="uid://cygoiktn8rvck" path="res://tileset/Sprout Lands - Sprites - Basic pack/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_er0uc"]
 [ext_resource type="PackedScene" uid="uid://i1fw5floe1a1" path="res://ScenesChara/BooJump.tscn" id="1_f24op"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://dg7nobpqcos0v" path="res://Scenes/gem.tscn" id="21_r41cf"]
 [ext_resource type="PackedScene" uid="uid://c77gi7qe83y0v" path="res://Scenes/ThieftArea.tscn" id="23_28y36"]
 [ext_resource type="PackedScene" uid="uid://clemimgmj4hbp" path="res://Scenes/DoorArea.tscn" id="23_sbkh5"]
+[ext_resource type="AudioStream" uid="uid://cj3wm4ft4x1cs" path="res://village-theme-68229.mp3" id="24_fsyop"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tq0jd"]
 texture = ExtResource("1_er0uc")
@@ -48927,6 +48928,9 @@ script = ExtResource("21_7n8xd")
 
 [node name="DoorArea" parent="." instance=ExtResource("23_sbkh5")]
 position = Vector2(896, 171)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_fsyop")
 
 [connection signal="body_entered" from="sorcierArea" to="sorcierArea" method="_on_body_entered"]
 [connection signal="body_exited" from="sorcierArea" to="sorcierArea" method="_on_body_exited"]
