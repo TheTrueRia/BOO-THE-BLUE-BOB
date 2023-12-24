@@ -1,3 +1,4 @@
+
 extends Label
 
 
@@ -8,12 +9,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if(get_node("../booCombat").game_over) == true:
+	if(get_node("../booCombat").coins) == 3:
 		show()
 		get_tree().paused = true
-		
-	if(get_node("../booCombat").health) == 0:
-		show()
-		get_tree().paused = true
-
-	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://4wd4rbd1tm4r"]
+[gd_scene load_steps=12 format=3 uid="uid://4wd4rbd1tm4r"]
 
 [ext_resource type="Script" path="res://SideScroller/Map.gd" id="1_8ycy3"]
 [ext_resource type="PackedScene" uid="uid://c5nlmucgl6fl5" path="res://ScenesChara/booCombat.tscn" id="2_1vxpt"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bmveyrse55rlo" path="res://SideScroller/Images/trap.tscn" id="8_xfvob"]
 [ext_resource type="PackedScene" uid="uid://lyk8u468jp0" path="res://SideScroller/Images/coins.tscn" id="9_4m2lw"]
 [ext_resource type="Script" path="res://SideScroller/Images/coins.gd" id="10_kb2a1"]
+[ext_resource type="Script" path="res://SideScroller/GameFinished.gd" id="11_frdrt"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_8ycy3")
@@ -262,7 +263,7 @@ theme_override_fonts/font = ExtResource("5_p2iym")
 theme_override_font_sizes/font_size = 100
 text = "YOU  FINISHED
 THE DUNGEON !"
-script = ExtResource("6_bhm2n")
+script = ExtResource("11_frdrt")
 
 [connection signal="body_entered" from="trap/trap" to="booCombat" method="_on_trap_body_entered"]
 [connection signal="body_exited" from="trap/trap" to="booCombat" method="_on_trap_body_exited"]

@@ -8,9 +8,9 @@ var game_over = false
 
 var damage_mode = false
 var health = 10
-var damage_per_second = 2
+var damage_per_second = 4
 
-var coins = 8
+var coins = 0
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -47,6 +47,7 @@ func _physics_process(delta):
 		# player dies, pause the game
 		if(health < 0):
 			health = 0
+			$"../GameOver".show()
 			print("GAME OVER !")
 
 func _on_timer_timeout():
@@ -58,15 +59,16 @@ func _on_coin_body_entered(body):
 	print("coins: "+str(coins))
 	
 	# game/level over when all coins are picked
-	if(coins == 8):
+	if(coins == 3):
 		print("GAME FINISHED") 
+		$"../GameFinished".show()
 	
 func _on_trap_body_entered(body):
 	# activate damage mode when the player is on the trap area
 	damage_mode = true
 	
 	if body.is_in_group("trap"):
-		health -= 2
+		health -= 4
 		
 
 func _on_trap_body_exited(body):
