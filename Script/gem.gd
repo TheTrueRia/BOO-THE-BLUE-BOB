@@ -2,5 +2,5 @@ extends Area2D
 
 
 func _on_body_entered(body):
-	if body is BooJump:
+	if body.name == "BooJump":
 		queue_free()

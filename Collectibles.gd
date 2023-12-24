@@ -1,5 +1,5 @@
 extends Object
-static var potion = 1
+static var potion = 0
 static var gem = 0
 
 static func incrementPotion():

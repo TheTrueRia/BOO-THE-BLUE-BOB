@@ -48911,9 +48911,16 @@ position = Vector2(356, 477)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("19_5w2jk")
 
+[node name="gem2" parent="gem" instance=ExtResource("21_r41cf")]
+visible = false
+z_index = 2
+position = Vector2(1061, 275)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("19_5w2jk")
+
 [node name="ThieftArea" parent="." instance=ExtResource("23_28y36")]
 z_index = 2
-position = Vector2(272, 443)
+position = Vector2(263, 460)
 script = ExtResource("21_7n8xd")
 
 [node name="DoorArea" parent="." instance=ExtResource("23_sbkh5")]
@@ -48923,6 +48930,8 @@ position = Vector2(896, 171)
 [connection signal="body_exited" from="sorcierArea" to="sorcierArea" method="_on_body_exited"]
 [connection signal="body_entered" from="gem/gem" to="BooJump" method="_on_gem_body_entered"]
 [connection signal="body_entered" from="gem/gem" to="gem/gem" method="_on_body_entered"]
+[connection signal="body_entered" from="gem/gem2" to="BooJump" method="_on_gem_body_entered"]
+[connection signal="body_entered" from="gem/gem2" to="gem/gem2" method="_on_body_entered"]
 [connection signal="body_entered" from="ThieftArea" to="ThieftArea" method="_on_body_entered"]
 [connection signal="body_exited" from="ThieftArea" to="ThieftArea" method="_on_body_exited"]
 [connection signal="body_entered" from="DoorArea" to="DoorArea" method="_on_body_entered"]

@@ -10,7 +10,7 @@ var dialog_finish
 var boo = CharacterBody2D
 var dialog_has_been_display
 
-var nbr_of_dialog=2
+var nbr_of_dialog=3
 var All_pos: Array[Vector2]
 
 const thieft_lines: Array[String]=[
@@ -37,11 +37,12 @@ func _ready():
 	label = $dialogue
 	image = $Sprite2D
 	boo = $"../BooJump"
-	#lines.append(Boo_lines2)
+	lines.append(Boo_lines2)
 	lines.append(thieft_lines)
 	lines.append(Boo_lines)
 	All_pos.append(global_position)
 	All_pos.append(Vector2.ZERO)
+	All_pos.append(global_position)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -58,6 +59,7 @@ func _unhandled_input(event):
 				dialog_has_been_display = true
 				hasBeenPlayed = true
 				Dmanager.Multiple_Dialog(All_pos,lines,nbr_of_dialog)
+
 
 
 
