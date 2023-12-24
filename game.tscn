@@ -9,5 +9,4 @@ script = ExtResource("1_q8f43")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="CanvasLayer" node_paths=PackedStringArray("game_manager") instance=ExtResource("1_bilsh")]
-game_manager = NodePath("../..")
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("1_bilsh")]
