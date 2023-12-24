@@ -15,9 +15,11 @@ func _process(delta):
 	if(get_node("../booCombat").game_over) == true:
 		show()
 		get_tree().paused = true
+	if(get_node("../booCombat").game_over) == false:
+		hide()
 		
 	if(get_node("../booCombat").health) == 0:
 		show()
 		get_tree().paused = true
-
+	z_index = 1000
 	

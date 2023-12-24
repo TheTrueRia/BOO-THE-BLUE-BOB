@@ -10,20 +10,27 @@ var last_obs
 var redBlob = preload("res://Scenes/redBlob.tscn")
 
 func new_game():
+	get_tree().paused = false
+	game_over = false
 	screen_size=get_window().size
+	$booCombat.health = 10
+	$booCombat.coins = 0
+	$booCombat.position.x = 100
 	$Camera2D.position = Vector2(576,324)
-	$ground.position = Vector2i(0,0) 
+	#$ground.position = Vector2(0,0) 
 	
 	$GameOver.position.x = $Camera2D.position.x+300
 	$GameOver.position.y = $Camera2D.position.y+400
 	
 	$GameFinished.position.x = $Camera2D.position.x+300
 	$GameFinished.position.y = $Camera2D.position.y+400
-
+	
+	$GameOver2.hide()
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$GameOver2.get_node("Button").pressed.connect(new_game)
+	new_game()
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -69,3 +76,4 @@ func remove_obs(obs):
 func hit_obs(body):
 	if body.name == "booCombat":
 		game_over = true
+		$GameOver2.show()
